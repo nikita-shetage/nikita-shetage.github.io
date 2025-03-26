@@ -1,1 +1,294 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ✅ Font Awesome for Icons --> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"> 
+    <title>Historia</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Full-Screen Slideshow */
+        .slideshow-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .slideshow-container img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+        }
+
+        .slideshow-container img.active {
+            opacity: 1;
+        }
+        
+
+
+        .logo{
+    height: 90px;
+    width:90px;
+    border-radius:100px;
+}
+header {
+    background:  #5e2c04;
+    border-bottom: 2px solid #d1b392;
+    color: white;
+    font-size: 150%;
+    padding: 10px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* Basic Navigation Bar Styling */
+nav {
+    background:  #5e2c04;
+    padding: 10px 0;
+}
+
+.nav-bar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+.nav-bar li {
+    position: relative;
+}
+
+.nav-bar li a {
+    text-decoration: none;
+    padding: 10px 20px;
+    color: white;
+    display: block;
+    font-size: 18px;
+}
+
+.nav-bar li a:hover {
+    background-color: #a67b5b;
+}
+/* Ensure dropdown is positioned correctly */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color:  #79443b;
+    display: none; /* Hidden by default */
+    min-width: 150px;
+    padding: 0;
+    margin: 0;
+    z-index: 1000;
+}
+
+.dropdown-menu li {
+    border-bottom: 1px solid cornsilk;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #9f8170;
+}
+
+/* Show Dropdown on Hover */
+.dropdown:hover .dropdown-menu,
+.dropdown:focus-within .dropdown-menu {
+    display: block;
+}
+  /* Hero Section */
+        .welcome-text {
+            padding-bottom: 20px;
+            font-size: 36px;
+            font-weight: bold;
+        }
+        .hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    position: relative;
+ padding-bottom: 20px;
+}
+        #visit-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 25px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        #place-name {
+            font-size: 25px;
+            font-weight: bold;
+            color: white;
+            font-style: bold;
+            margin-left: 10px; /* Space between message and place name */
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 24px;
+            background: orange;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: 0.3s;
+            font-size: 16px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn:hover {
+            background: #ff8c00;
+            transform: scale(1.1);
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            backdrop-filter: blur(5px);
+            color: white;
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Background Slideshow -->
+    <div class="slideshow-container">
+        <img src="./images/p2.jpg" class="active">
+        <img src="./images/p3.jpg">
+        <img src="./images/p4.jpg">
+        <img src="./images/p6.jpg">
+        <img src="./images/p5.jpg">
+        <img src="./images/p7.jpg">
+        <img src="./images/p8.jpg">
+        
+    </div>
+
+    <header>
+        <img src="./images/logo.jpg" alt="HISTORIA" class="logo">
+<h1>HISTORIA</h1>
+<nav>
+    <ul class="nav-bar">
+        <li><a href="index.html"><i class="fas fa-home nav-icon"></i><b>Home</b></a></li>
+        <li><a href="pages/about1.html"><i class="fas fa-info-circle nav-icon"></i><b>About Us</b></a></li>
+        <li class="dropdown">
+            <a href="pages/place.html"><i class="fas fa-map-marked-alt nav-icon"></i><b>Places&#9662;</b></a>
+          
+            <ul class="dropdown-menu">
+                <li><a href="pages/maharashtra.html"><b>Maharashtra</b></a></li>
+                <li><a href="pages/karnataka.html"><b>Karnataka</b></a></li>               
+                <li><a href="pages/place.html"><b>See More</b></a></li>
+            </ul>
+    
+
+        </li>
+        
+        </li>
+        <li class="dropdown">
+            <a href="pages/login11.html"><i class="fa-solid fa-user"></i><b> Account&#9662;</b></a>
+            <ul class="dropdown-menu">
+                <li><a href="pages/login11.html"><b>Login</b></a></li>
+                <li><a href="#" onclick="logoutUser()"><b>Logout</b></a></li>
+            </ul>
+        </li>
+                <li><a href="pages/booking.html"><i class="fas fa-ticket-alt nav-icon"></i><b>Guide Booking</b></a></li>
+                <li><a href="pages/contactus.html"><i class="fa-solid fa-phone"></i><b> Contact Us</b></a></li>
+                <li><a href="pages/feedback.html"><i class="fas fa-comments nav-icon"></i><b>Feedback</b></a></li>
+                
+</ul>
+</nav> 
+  
+    </header>
+    
+    <!-- Hero Section -->
+    <main class="hero">
+        <h1 class="welcome-text">Welcome to Historia</h1>
+        <div id="visit-container">
+            <span>Do Come And Visit</span>
+            <span id="place-name">Taj Mahal</span>
+        </div>
+        <a href="./pages/place.html" class="btn">Visit</a>
+    </main>
+  <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Historia. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Slideshow -->
+    <script>
+        let slides = document.querySelectorAll(".slideshow-container img");
+        let placeName = document.getElementById("place-name");
+
+        let places = [
+            "Taj Mahal",
+            "Kurukshetra",
+            "Victoria Memorial",
+            "Hampi",
+            "Rani ki vav",
+            "Golconda Fort",
+            "Qutubminar"
+            
+        ];
+
+        let index = 0;
+
+        function changeSlide() {
+            slides[index].classList.remove("active");
+            index = (index + 1) % slides.length;
+            slides[index].classList.add("active");
+
+            // Change place name
+            placeName.textContent = places[index];
+        }
+
+        setInterval(changeSlide, 3000); // Change image and place name every 3 seconds
+        
+    function logoutUser() {
+    sessionStorage.removeItem("loggedIn"); // Remove login session
+    alert("You have been logged out.");
+    window.location.href = "login11.html"; // Redirect to login page
+}
+
+    </script>
+
+</body>
+</html>
