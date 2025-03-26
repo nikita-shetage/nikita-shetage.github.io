@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="../css/style1.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="container">
+    <header>
+        <img src="../images/logo.jpg" alt="Evergreen Organic Shop" class="logo">
+<h1>HISTORIA</h1>
+<nav>
+    <ul class="nav-bar">
+        <li><a href="../index.html"><i class="fas fa-home nav-icon"></i><b>Home</b></a></li>
+        <li><a href="about1.html"><i class="fas fa-info-circle nav-icon"></i><b>About Us</b></a></li>
+        <li class="dropdown">
+            <a href="place.html"><i class="fas fa-map-marked-alt nav-icon"></i><b>Places&#9662;</b></a>
+          
+            <ul class="dropdown-menu">
+                <li><a href="maharashtra.html"><b>Maharashtra</b></a></li>
+                <li><a href="karnataka.html"><b>Karnataka</b></a></li>               
+                <li><a href="place.html"><b>See More</b></a></li>
+            </ul>
+    
+
+        </li>
+        
+        </li>
+        <li class="dropdown">
+            <a href="#"><i class="fa-solid fa-user"></i><b> Account&#9662;</b></a>
+            <ul class="dropdown-menu">
+                <li><a href="login11.html"><b>Login</b></a></li>
+                <li><a href="#" onclick="logoutUser()"><b>Logout</b></a></li>
+            </ul>
+        </li>
+                <li><a href="booking.html"><i class="fas fa-ticket-alt nav-icon"></i><b>Guide Booking</b></a></li>
+                <li><a href="contactus.html"><i class="fa-solid fa-phone"></i><b> Contact Us</b></a></li>
+                <li><a href="feedback.html"><i class="fas fa-comments nav-icon"></i><b>Feedback</b></a></li>
+                
+</ul>
+</nav> 
+  
+    </header>
+        </div>
+    </div>
+<br>
+<h1><center>Himachal Pradesh</center></h1>
+<br>
+<br>
+<button onclick="showCategory('forts')">Go to Historical Forts</button>
+<button onclick="showCategory('religious')">Go to Religious Places</button>
+<button onclick="showCategory('monuments')">Go to Monuments & Heritage sites</button>
+<br><br>
+<h2 id="fort-section"><b><center>Historical Forts</center></b></h2>
+<section class="categories"> 
+    <div class="category">
+        <img src="../images/hima1.jpg"alt="Vegetable">
+        <h2>Kangra Fort – Kangra</h2>
+
+          <br>
+        </h2>
+        <p><b>Info: One of India’s oldest forts, dating back to the Trigarta Kingdom, withstanding multiple invasions.
+
+            Opening Hours: 9:00 AM – 6:00 PM
+            
+            Entry Fee: ₹150 (Indians), ₹300 (Foreigners)
+            
+            </b></p>
+            
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3380.324311821398!2d76.24931888192312!3d32.087519506815475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391b4590bd14dd71%3A0xe9db7498648fff42!2sKangra%20Fort!5e0!3m2!1sen!2sin!4v1741621008061!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <a href="booking.html" class="btn">Book Now</a>
+    </div>
+    <div class="category">
+        <img src="../images/hima2.jpg"alt="Fruits">
+        <h2> Kuthar Fort – Solan</h2>
+        <p><b>
+            Info: A 17th-century Rajput fort with Mughal influences, offering breathtaking Himalayan views.
+
+            Opening Hours: 8:00 AM – 6:00 PM
+            
+            Entry Fee: ₹50
+            </b></p><br>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3420.9925002783602!2d76.95832727538289!3d30.97069147447028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3905627c36d4c09b%3A0xa5be34262c714a66!2sKuthar%20Palace!5e0!3m2!1sen!2sin!4v1741621363090!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <a href="booking.html" class="btn">Book Now</a>
+    </div>
+        <div class="category">
+            <img src="../images/hima3.jpg" alt="Rice">
+            <h2> Kamru Fort – Sangla Valley
+            </h2>
+            <p><b>
+                Info: A small yet historic fort, once the capital of Bushahr Kingdom, with a wooden temple of Kamakhya Devi.
+
+Opening Hours: 9:00 AM – 5:00 PM
+
+Entry Fee: Free
+
+</b></p><br>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3404.1833769013588!2d78.25321098173579!3d31.436618207864054!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3906153b9f615d31%3A0x7d0172b7045b003b!2sKamru%20Fort!5e0!3m2!1sen!2sin!4v1741621570891!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <a href="booking.html" class="btn">Book Now</a>
+        </div>
+    </section>
+        <br>
+        <br>
+        <br>
+        <br>
+        
+                    
+<h2 id="religious-section"><b><center>Religious Places</center></b></h2>
+<section class="categories">
+        <div class="category">
+            <<img src="../images/hima4.jpg" alt="Oil">
+            <h2>  Jwala Devi Temple – Kangra
+
+
+            </h2>
+            <p><b>
+                nfo: One of the 51 Shakti Peethas, famous for its eternal flame that burns without fuel.
+
+Opening Hours: 5:00 AM – 10:00 PM
+
+Entry Fee: Free
+
+
+
+                </b></p>
+                <br>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1734731.7342587141!2d73.88511755625!3d31.875394399999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391b312f2171643f%3A0xa49c70e95f333bc1!2sShaktipeeth%20Shri%20Jwalamukhi%20Temple!5e0!3m2!1sen!2sin!4v1741621779586!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <a href="booking.html" class="btn">Book Now</a>
+        </div>
+    
+        <div class="category">
+            <img src="../images/hima5.jpg" alt="Oil">
+            <h2>Bhimakali Temple – Sarahan
+
+            </h2>
+            <p><b><br>
+                
+Info: A 1,000-year-old temple with unique Tibetan-style architecture, dedicated to Goddess Bhimakali.
+
+Opening Hours: 6:00 AM – 8:00 PM
+
+Entry Fee: Free
+
+
+                </b></p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3416.938215038035!2d77.21166867538757!3d31.08364557441696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3905821ee40fffff%3A0xdf9da378047293a4!2sBhima%20Kali%20Temple!5e0!3m2!1sen!2sin!4v1741685382267!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <a href="booking.html" class="btn">Book Now</a>
+            </div>
+        <div class="category">
+            <img src="../images/hima7.jpg" alt="Oil">
+            <h2> Hidimba Devi Temple – Manali
+
+
+            </h2>
+            <p><b> 
+                Info: A 16th-century wooden temple dedicated to Hidimba, wife of Bhima from Mahabharata.
+
+Opening Hours: 8:00 AM – 6:00 PM
+
+Entry Fee: Free
+
+                </b></p><br>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.335325465869!2d75.37791737504061!3d12.95038178736306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba4c87c2dd864d7%3A0x9c4904b7c37b4956!2sSri%20Kshetra%20Dharmasthala%20Manjunatha%20Swamy%20Temple!5e0!3m2!1sen!2sin!4v1741586474361!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <a href="booking.html" class="btn">Book Now</a>
+        </div>
+        </section>
+       <br>
+       <br>
+       
+       <h2 id="monuments-section"><b><center>Monuments & Heritage sites</center></b></h2>
+<section class="categories">
+       <div class="category" >
+        <img src="../images/hima6.jpg" alt="Millets">
+        <h2>Viceregal Lodge – Shimla
+        </h2>
+        <br>
+       
+        <p><b>
+
+            Info: The former residence of British Viceroys, now the Indian Institute of Advanced Studies.
+
+            Opening Hours: 9:30 AM – 5:30 PM (Closed on Mondays)
+            
+            Entry Fee: ₹50 (Indians), ₹200 (Foreigners)
+            
+            
+            
+
+            
+            </b></p>
+            <br>
+           
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3416.2180671999927!2d77.13959997538844!3d31.10367057440752!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3905791b0ab94b1d%3A0xc32a176520979987!2sViceregal%20Lodge!5e0!3m2!1sen!2sin!4v1741685627980!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+         <a href="booking.html" class="btn">Book Now</a>
+        </div>
+
+    <div class="category">
+        <img src="../images/hima9.jpg" alt="Oil">
+        <h2>Jandrighat Palace – Dalhousie
+
+
+        </h2>
+        <p><b>
+
+            Info: A lesser-known British-era palace with stunning views of the Himalayas.
+
+            Opening Hours: 9:00 AM – 5:00 PM
+            
+            Entry Fee: Free
+            
+            
+            
+            </b></p><br><br>
+           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3363.264251787084!2d75.98864857544982!3d32.5457920737613!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391c914d1815cb07%3A0x3753b5736916b20d!2sJandrighat%20Palace%2C%20Himachal%20Pradesh%20176304!5e0!3m2!1sen!2sin!4v1741685816596!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <a href="booking.html" class="btn">Book Now</a>
+    </div>
+    <div class="category">
+        <img src="../images/hima8.jpg" alt="Oil">
+        <h2>St. John in the Wilderness Church – Dharamshala
+
+        </h2>
+        <p><b>
+
+            Info: A historic church built in 1852, surrounded by deodar forests.
+
+Opening Hours: 7:00 AM – 6:30 PM
+
+Entry Fee: Free
+
+
+            
+            
+            
+            </b></p><br>
+            <br>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1727784.332997485!2d73.87926935625003!3d32.242506500000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391b56d57a1071bb%3A0x1c2b47b1ba807417!2sChurch%20of%20St.%20John%20in%20the%20Wilderness!5e0!3m2!1sen!2sin!4v1741685999287!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            
+        <a href="booking.html" class="btn">Book Now</a>
+    </div>
+        </div>
+    </section>
+    <script>
+        function logoutUser() {
+            sessionStorage.removeItem("loggedIn"); // Remove login session
+            alert("You have been logged out.");
+            window.location.href = "login11.html"; // Redirect to login page
+        }
+        function showCategory(category) {
+            if (category === 'monuments') {
+                document.getElementById("monuments-section").scrollIntoView({ behavior: 'smooth' });
+            } else if (category === 'forts') {  // Changed from 'fort' to 'forts'
+                document.getElementById("fort-section").scrollIntoView({ behavior: 'smooth' });
+            } else if (category === 'religious') {  // Changed 'Religious' to lowercase for consistency
+                document.getElementById("religious-section").scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+          </script>
+</body>
+</html>

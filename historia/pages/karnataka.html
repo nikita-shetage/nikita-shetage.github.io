@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="../css/style1.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="container">
+    <header>
+        <img src="../images/logo.jpg" alt="Evergreen Organic Shop" class="logo">
+<h1>HISTORIA</h1>
+<nav>
+    <ul class="nav-bar">
+        <li><a href="../index.html"><i class="fas fa-home nav-icon"></i><b>Home</b></a></li>
+        <li><a href="about1.html"><i class="fas fa-info-circle nav-icon"></i><b>About Us</b></a></li>
+        <li class="dropdown">
+            <a href="place.html"><i class="fas fa-map-marked-alt nav-icon"></i><b>Places&#9662;</b></a>
+          
+            <ul class="dropdown-menu">
+                <li><a href="maharashtra.html"><b>Maharashtra</b></a></li>
+                <li><a href="karnataka.html"><b>Karnataka</b></a></li>               
+                <li><a href="place.html"><b>See More</b></a></li>
+            </ul>
+    
+
+        </li>
+        
+        </li>
+        <li class="dropdown">
+            <a href="#"><i class="fa-solid fa-user"></i><b> Account&#9662;</b></a>
+            <ul class="dropdown-menu">
+                <li><a href="login11.html"><b>Login</b></a></li>
+                <li><a href="#" onclick="logoutUser()"><b>Logout</b></a></li>
+            </ul>
+        </li>
+                <li><a href="booking.html"><i class="fas fa-ticket-alt nav-icon"></i><b>Guide Booking</b></a></li>
+                <li><a href="contactus.html"><i class="fa-solid fa-phone"></i><b> Contact Us</b></a></li>
+                <li><a href="feedback.html"><i class="fas fa-comments nav-icon"></i><b>Feedback</b></a></li>
+                
+</ul>
+</nav> 
+  
+    </header>
+        </div>
+    </div>
+<br>
+<h1><center>Karnataka</center></h1>
+<br>
+<br>
+<button onclick="showCategory('forts')">Go to Historical Forts</button>
+<button onclick="showCategory('religious')">Go to Religious Places</button>
+<button onclick="showCategory('monuments')">Go to Monuments & Heritage sites</button>
+<br><br>
+<h2 id="fort-section"><b><center>Historical Forts</center></b></h2>
+<section class="categories"> 
+    <div class="category">
+        <img src="../images/karna1.jpg"alt="Vegetable">
+        <h2>Bangalore Fort – 
+          <br>Bangalore</h2>
+        <p><b>Info: A 16th-century fort built by Kempegowda, showcasing Indo-Islamic architecture.
+
+            Opening Hours: 8:30 AM – 5:30 PM
+            
+            Entry Fee: Free
+            
+            </b></p><br>
+            
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.141409991158!2d77.57331127504082!3d12.96280178735181!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15e3043a1d57%3A0xb2a4590209bde6d7!2sBengaluru%20Fort!5e0!3m2!1sen!2sin!4v1741584236675!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <a href="booking.html" class="btn">Book Now</a>
+    </div>
+    <div class="category">
+        <img src="../images/karna2.jpg"alt="Fruits">
+        <h2>Bidar Fort – <br>Bidar</h2>
+        <p><b>
+            Info: A grand fort from the Bahmani Sultanate era, known for Persian-style architecture.
+
+            Opening Hours: 9:00 AM – 5:00 PM
+            
+            Entry Fee: Free
+            </b></p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3796.2375184458315!2d77.53113350000001!3d17.9210724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcec72d9b5a29b3%3A0x36b4bccba4e3d780!2sBidar%20Fort!5e0!3m2!1sen!2sin!4v1741584460258!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <a href="booking.html" class="btn">Book Now</a>
+    </div>
+        <div class="category">
+            <img src="../images/karana3.jpg" alt="Rice">
+            <h2>Chitradurga Fort  – <br>Chitradurga</h2>
+            <p><b>
+                Info: A massive hill fort built by various dynasties, famous for its stone carvings and secret passages.
+
+Opening Hours: 6:00 AM – 6:00 PM
+
+Entry Fee: ₹20 (Indians), ₹200 (Foreigners)
+</b></p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3867.636520683916!2d76.39633847506357!3d14.216048686226006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bba745bd7800e51%3A0xca0e760df97f8c1c!2sChitradurga%20Fort!5e0!3m2!1sen!2sin!4v1741584708605!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <a href="booking.html" class="btn">Book Now</a>
+        </div>
+    </section>
+        <br>
+        <br>
+        <br>
+        <br>
+        
+        <h2 id="religious-section"><b><center>Religious Places</center></b></h2>
+        <section class="categories">
+        <div class="category">
+            <img src="../images/karna7.jpg" alt="Oil">
+            <h2> Murudeshwar Temple – Uttara Kannada
+
+            </h2>
+            <p><b>
+                Info: Home to a towering statue of Lord Shiva and a scenic beachside location.
+
+             Opening Hours: 5:00 AM – 9:00 PM
+
+           Entry Fee: Free
+
+
+                </b></p>
+                <br>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3869.7200439749113!2d74.484746!3d14.0936966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbeb90055deede9%3A0xbd5fa3cb8518937b!2sMurudeshwar%20Temple!5e0!3m2!1sen!2sin!4v1741586038550!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <a href="booking.html" class="btn">Book Now</a>
+        </div>
+    
+        <div class="category">
+            <img src="../images/karna8.jpg" alt="Oil">
+            <h2>Sringeri Sharada Peetham – Chikmagalur
+            </h2>
+            <p><b>
+                Info: A revered Advaita Vedanta center established by Adi Shankaracharya.
+
+Opening Hours: 6:00 AM – 9:00 PM
+
+Entry Fee: Free
+
+
+                </b></p>
+                <br>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3877.4049529240033!2d79.40965697505276!3d13.633113386746517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4d4b1b1aed4a4b%3A0x2f05fd251c1c4ceb!2sSringeri%20Sharada%20Peetham!5e0!3m2!1sen!2sin!4v1741586275227!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <a href="booking.html" class="btn">Book Now</a>
+            </div>
+        <div class="category">
+            <img src="../images/karna9.jpg" alt="Oil">
+            <h2>Dharmasthala Manjunatha Temple – Dakshina Kannada
+            </h2>
+            <p><b> 
+                Info: A 16th-century temple dedicated to Lord Shiva, known for its charitable services.
+
+Opening Hours: 6:30 AM – 2:00 PM, 5:00 PM – 8:30 PM
+
+Entry Fee: Free
+
+                </b></p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.335325465869!2d75.37791737504061!3d12.95038178736306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba4c87c2dd864d7%3A0x9c4904b7c37b4956!2sSri%20Kshetra%20Dharmasthala%20Manjunatha%20Swamy%20Temple!5e0!3m2!1sen!2sin!4v1741586474361!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <a href="booking.html" class="btn">Book Now</a>
+        </div>
+        </section>
+       <br>
+       <br>
+       
+       
+       <h2 id="monuments-section"><b><center>Monuments & Heritage sites</center></b></h2>
+<section class="categories">
+
+       <div class="category" >
+        <img src="../images/karna4.jpg" alt="Millets">
+        <h2>Mysore Palace –Mysore</h2>
+        <br>
+       
+        <p><b>
+
+            Info: A majestic Indo-Saracenic palace, once home to the Wodeyar dynasty.
+
+Opening Hours: 10:00 AM – 5:30 PM
+
+Entry Fee: ₹100 (Indians), ₹500 (Foreigners)
+
+
+            
+            </b></p>
+            <br>
+           
+         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3898.157726673951!2d76.65259997502973!3d12.30516298795235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baf701103f9a1f9%3A0xc37fbae2a124da0d!2sMysore%20Palace!5e0!3m2!1sen!2sin!4v1741584897285!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+         <a href="booking.html" class="btn">Book Now</a>
+        </div>
+
+    <div class="category">
+        <img src="../images/karna5.jpg" alt="Oil">
+        <h2>Gol Gumbaz – Bijapur
+        </h2>
+        <p><b>
+
+            Info: A mausoleum with the world’s second-largest dome, built for Sultan Muhammad Adil Shah.
+
+Opening Hours: 6:00 AM – 6:00 PM
+
+Entry Fee: ₹25 (Indians), ₹300 (Foreigners)
+
+            
+            </b></p><br>
+           <br>
+           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3818.924546530436!2d75.73354547511754!3d16.83009888396523!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc65574c0cdafa3%3A0xd964a78d4d2e25a6!2sGol%20Gumbaz%20of%20Adil%20Shah!5e0!3m2!1sen!2sin!4v1741585574155!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <a href="booking.html" class="btn">Book Now</a>
+    </div>
+    <div class="category">
+        <img src="../images/karna6.jpg" alt="Oil">
+        <h2>Belur & Halebidu Temples – Hassan
+        </h2>
+        <p><b>
+
+            Info: Exquisite Hoysala-era temples featuring intricate carvings and sculptures.
+
+            Opening Hours: 6:00 AM – 6:30 PM
+            
+            Entry Fee: Free
+            
+            
+            
+            </b></p>
+            <br>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3884.2026452300624!2d75.98966428885497!3d13.212590400000023!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbacc77ed23ccfd%3A0xef3f6d83c56403c9!2sHalebidu%20Archaelogical%20Site!5e0!3m2!1sen!2sin!4v1741585819291!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            
+        <a href="../images/booking.html" class="btn">Book Now</a>
+    </div>
+        </div>
+    </section>
+    <script>
+        function logoutUser() {
+            sessionStorage.removeItem("loggedIn"); // Remove login session
+            alert("You have been logged out.");
+            window.location.href = "login11.html"; // Redirect to login page
+        }
+        function showCategory(category) {
+            if (category === 'monuments') {
+                document.getElementById("monuments-section").scrollIntoView({ behavior: 'smooth' });
+            } else if (category === 'forts') {  // Changed from 'fort' to 'forts'
+                document.getElementById("fort-section").scrollIntoView({ behavior: 'smooth' });
+            } else if (category === 'religious') {  // Changed 'Religious' to lowercase for consistency
+                document.getElementById("religious-section").scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+          </script>
+</body>
+</html>

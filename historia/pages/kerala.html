@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="../css/style1.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="container">
+    <header>
+        <img src="../images/logo.jpg" alt="Evergreen Organic Shop" class="logo">
+<h1>HISTORIA</h1>
+<nav>
+    <ul class="nav-bar">
+        <li><a href="../index.html"><i class="fas fa-home nav-icon"></i><b>Home</b></a></li>
+        <li><a href="about1.html"><i class="fas fa-info-circle nav-icon"></i><b>About Us</b></a></li>
+        <li class="dropdown">
+            <a href="place.html"><i class="fas fa-map-marked-alt nav-icon"></i><b>Places&#9662;</b></a>
+          
+            <ul class="dropdown-menu">
+                <li><a href="maharashtra.html"><b>Maharashtra</b></a></li>
+                <li><a href="karnataka.html"><b>Karnataka</b></a></li>               
+                <li><a href="place.html"><b>See More</b></a></li>
+            </ul>
+    
+
+        </li>
+        
+        </li>
+        <li class="dropdown">
+            <a href="#"><i class="fa-solid fa-user"></i><b> Account&#9662;</b></a>
+            <ul class="dropdown-menu">
+                <li><a href="login11.html"><b>Login</b></a></li>
+                <li><a href="#" onclick="logoutUser()"><b>Logout</b></a></li>
+            </ul>
+        </li>
+                <li><a href="booking.html"><i class="fas fa-ticket-alt nav-icon"></i><b>Guide Booking</b></a></li>
+                <li><a href="contactus.html"><i class="fa-solid fa-phone"></i><b> Contact Us</b></a></li>
+                <li><a href="feedback.html"><i class="fas fa-comments nav-icon"></i><b>Feedback</b></a></li>
+                
+</ul>
+</nav> 
+  
+    </header>
+        </div>
+    </div>
+<br>
+<h1><center>Kerala</center></h1>
+<br>
+<br>
+<button onclick="showCategory('forts')">Go to Historical Forts</button>
+<button onclick="showCategory('religious')">Go to Religious Places</button>
+<button onclick="showCategory('monuments')">Go to Monuments & Heritage sites</button>
+<br><br>
+<h2 id="fort-section"><b><center>Historical Forts</center></b></h2>
+<section class="categories"> 
+    <div class="category">
+        <img src="../images/ker1.jpg"alt="Vegetable">
+        <h2>Palakkad Fort – Palakkad
+
+        </h2>
+
+          <br>
+        </h2>
+        <p><b>Info: A well-preserved fort built by Hyder Ali in 1766, showcasing Indo-Islamic architecture.
+
+            Opening Hours: 8:00 AM – 6:00 PM
+            
+            Entry Fee: Free
+            
+            
+            
+            </b></p>
+            
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.6204646015126!2d76.65454657480468!3d10.76370568938431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba86dee9706765f%3A0xbe653c3f3ca26523!2sPalakkad%20Fort!5e0!3m2!1sen!2sin!4v1741687409953!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <a href="booking.html" class="btn">Book Now</a>
+    </div>
+    <div class="category">
+        <img src="../images/ker2.jpg"alt="Fruits">
+        <h2> Thalassery Fort – Kannur
+        </h2>
+        <p><b>
+            Info: A colonial-era fort built by the British East India Company, known for its secret tunnels and underground chambers.
+
+Opening Hours: 8:00 AM – 6:00 PM
+
+Entry Fee: Free
+
+            </b></p><br>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3906.240355017959!2d75.48401317482029!3d11.748110488465974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba42656b0d90a13%3A0x1b409cfe11125095!2sThalassery%20Fort!5e0!3m2!1sen!2sin!4v1741687487278!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <a href="booking.html" class="btn">Book Now</a>
+    </div>
+        <div class="category">
+            <img src="../images/ker3.jpg" alt="Rice">
+            <h2> St. Angelo Fort – Kannur
+
+
+            </h2>
+            <p><b>
+                Info: A 16th-century Portuguese fort with breathtaking views of the Arabian Sea.
+
+Opening Hours: 8:00 AM – 6:00 PM
+
+Entry Fee: Free
+
+
+</b></p><br><br>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3904.732527944928!2d75.36954757482195!3d11.853986638367983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba422c439bd1a45%3A0xe99d66de5c491646!2sSt.%20Angelo%20Fort%20Kannur!5e0!3m2!1sen!2sin!4v1741687572172!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <a href="booking.html" class="btn">Book Now</a>
+        </div>
+    </section>
+        <br>
+        <br>
+        <br>
+        <br>
+                    
+<h2 id="religious-section"><b><center>Religious Places</center></b></h2>
+<section class="categories">
+        <div class="category">
+            <img src="../images/ker4.jpg" alt="Oil">
+            <h2>  Sabarimala Temple – Pathanamthitta
+
+
+
+            </h2>
+            <p><b>
+                Info: One of the largest pilgrimage sites in the world, dedicated to Lord Ayyappa.
+
+Opening Hours: 3:00 AM – 12:00 PM, 5:00 PM – 10:00 PM (Seasonal Opening)
+
+Entry Fee: Free
+
+
+
+
+                </b></p>
+                <br>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31487.906047285498!2d77.05038044256337!3d9.42243215193398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b065b984dd41c11%3A0x953037d850a3006e!2sSabarimala%2C%20Kerala!5e0!3m2!1sen!2sin!4v1741687670788!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <a href="booking.html" class="btn">Book Now</a>
+        </div>
+    
+        <div class="category">
+            <img src="../images/ker5.jpg" alt="Oil">
+            <h2>Guruvayur Temple – Thrissur
+
+
+            </h2>
+            <p><b>
+                
+                Info: A revered Krishna temple, famous for its strict rituals and elephant sanctuary.
+
+                Opening Hours: 3:00 AM – 12:30 PM, 4:30 PM – 9:15 PM
+                
+                Entry Fee: Free
+                
+                
+
+                </b></p><br>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3921.8033596133605!2d76.03450707767296!3d10.594542062581677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba79461d5c8d24b%3A0x6f7a8d815f48709e!2sGuruvayur%20Shri%20Krishna%20Temple!5e0!3m2!1sen!2sin!4v1741687754945!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <a href="booking.html" class="btn">Book Now</a>
+            </div>
+        <div class="category">
+            <img src="../images/ker6.jpg" alt="Oil">
+            <h2> St. Francis Church – Kochi
+
+
+            </h2>
+            <p><b> 
+                Info: The oldest European church in India, built by the Portuguese in the early 16th century.
+
+Opening Hours: 9:00 AM – 5:00 PM
+
+Entry Fee: Free
+
+
+                </b></p><br><br>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.613735445946!2d76.23829897479314!3d9.966059590137633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b086d315f909885%3A0x8b5c70262cb808a1!2sSt.%20Francis%20CSI%20Church!5e0!3m2!1sen!2sin!4v1741687828717!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <a href="booking.html" class="btn">Book Now</a>
+        </div>
+        </section>
+       <br>
+       <br>
+       
+       <h2 id="monuments-section"><b><center>Monuments & Heritage sites</center></b></h2>
+<section class="categories">
+
+       <div class="category" >
+        <img src="../images/ker7.jpg" alt="Millets">
+        <h2> Padmanabhapuram Palace – Thuckalay
+
+
+        </h2>
+        <br>
+       
+        <p><b>
+
+            Info: A grand 16th-century wooden palace, once the seat of the Travancore Kingdom.
+
+Opening Hours: 9:00 AM – 5:00 PM (Closed on Mondays)
+
+Entry Fee: ₹25 (Indians), ₹300 (Foreigners)
+
+
+
+            
+
+            
+            </b></p>
+            <br>
+           
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3948.5218084504368!2d77.32412377477118!3d8.250743091782734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b04f8f729d2073d%3A0x257c390ae191b06f!2sPadmanabhapuram%20Palace!5e0!3m2!1sen!2sin!4v1741687915902!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+         <a href="booking.html" class="btn">Book Now</a>
+        </div>
+
+    <div class="category">
+        <img src="../images/ker8.jpg" alt="Oil">
+        <h2>Mattancherry Palace – Kochi
+
+
+
+
+        </h2>
+        <p><b>
+            Info: Also known as the Dutch Palace, it showcases Kerala murals and royal artifacts.
+
+            Opening Hours: 10:00 AM – 5:00 PM (Closed on Fridays)
+            
+            Entry Fee: ₹5
+            
+            
+            
+            
+            </b></p><br>
+           <br>
+           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.707487167439!2d76.256775874793!3d9.958277290145007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b086d44d3e17f1b%3A0x6880a4b3e174b5c8!2sMattancherry%20Palace!5e0!3m2!1sen!2sin!4v1741687987943!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <a href="booking.html" class="btn">Book Now</a>
+    </div>
+    <div class="category">
+        <img src="../images/ker9.jpg" alt="Oil">
+        <h2>Jewish Synagogue – Kochi
+
+
+        </h2>
+        <p><b>
+
+            Info: A 16th-century synagogue with a stunning interior, featuring Belgian chandeliers and Chinese tiles.
+
+Opening Hours: 10:00 AM – 12:00 PM, 3:00 PM – 5:00 PM (Closed on Fridays & Saturdays)
+
+Entry Fee: ₹10
+
+
+
+
+            
+            
+            
+            </b></p><br>
+            <br>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.707487167439!2d76.256775874793!3d9.958277290145007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b086dc4134912cb%3A0xd1f51b9929b58dae!2sParadesi%20Synagogue!5e0!3m2!1sen!2sin!4v1741688091417!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            
+        <a href="booking.html" class="btn">Book Now</a>
+    </div>
+        </div>
+    </section>
+    <script>
+        function logoutUser() {
+            sessionStorage.removeItem("loggedIn"); // Remove login session
+            alert("You have been logged out.");
+            window.location.href = "login11.html"; // Redirect to login page
+        }
+        function showCategory(category) {
+            if (category === 'monuments') {
+                document.getElementById("monuments-section").scrollIntoView({ behavior: 'smooth' });
+            } else if (category === 'forts') {  // Changed from 'fort' to 'forts'
+                document.getElementById("fort-section").scrollIntoView({ behavior: 'smooth' });
+            } else if (category === 'religious') {  // Changed 'Religious' to lowercase for consistency
+                document.getElementById("religious-section").scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+          </script>
+</body>
+</html>

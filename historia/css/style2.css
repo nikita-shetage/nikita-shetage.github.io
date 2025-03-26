@@ -1,0 +1,163 @@
+body {
+    font-family: Arial, sans-serif;
+   margin: 0;
+   padding: 0;
+   text-align: center;
+   background-image: url('fed1.jpg'); /* Change to your image file */
+   background-size: cover; /* Cover entire screen */
+   background-position: center; /* Center the image */
+   background-attachment: fixed; /* Fixed background */
+
+     }
+.logo{
+    height: 90px;
+    width:90px;
+    border-radius:100px;
+}
+header {
+    background:  #5e2c04;
+    border-bottom: 2px solid #d1b392;
+    color: white;
+    font-size: 150%;
+    padding: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* Basic Navigation Bar Styling */
+nav {
+    background:  #5e2c04;
+    padding: 10px 0;
+}
+
+.nav-bar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+.nav-bar li {
+    position: relative;
+}
+
+.nav-bar li a {
+    text-decoration: none;
+    padding: 10px 20px;
+    color: white;
+    display: block;
+    font-size: 18px;
+}
+
+.nav-bar li a:hover {
+    background-color: #a67b5b;
+}
+/* Dropdown Menu Styling */
+.dropdown-menu {
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color:  #79443b;
+    display: none;
+    min-width: 150px;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-menu li {
+    border-bottom: 1px solid cornsilk;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 10px;
+    color: white;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #9f8170;
+}
+
+/* Show Dropdown on Hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+* .{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+.feedback-container {
+    background: cornsilk;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.2);
+    margin: 50px auto;
+    
+}
+
+h2 {
+    color: black;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 14px;
+    color: #666;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-top: 10px;
+    text-align: left;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.rating {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin: 10px 0;
+}
+
+.star {
+    font-size: 25px;
+    cursor: pointer;
+    color: #ccc;
+    transition: color 0.3s;
+}
+
+.star:hover,
+.star.active {
+    color: #f39c12;
+}
+
+button {
+    background: coral;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    width: 100%;
+}
+
+button:hover {
+    background: rgb(247, 90, 34);
+}

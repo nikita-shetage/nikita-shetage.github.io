@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="../css/style1.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="container">
+    <header>
+        <img src="../images/logo.jpg" alt="Evergreen Organic Shop" class="logo">
+<h1>HISTORIA</h1>
+<nav>
+    <ul class="nav-bar">
+        <li><a href="../index.html"><i class="fas fa-home nav-icon"></i><b>Home</b></a></li>
+        <li><a href="about1.html"><i class="fas fa-info-circle nav-icon"></i><b>About Us</b></a></li>
+        <li class="dropdown">
+            <a href="place.html"><i class="fas fa-map-marked-alt nav-icon"></i><b>Places&#9662;</b></a>
+          
+            <ul class="dropdown-menu">
+                <li><a href="maharashtra.html"><b>Maharashtra</b></a></li>
+                <li><a href="karnataka.html"><b>Karnataka</b></a></li>               
+                <li><a href="place.html"><b>See More</b></a></li>
+            </ul>
+    
+
+        </li>
+        
+        </li>
+        <li class="dropdown">
+            <a href="#"><i class="fa-solid fa-user"></i><b> Account&#9662;</b></a>
+            <ul class="dropdown-menu">
+                <li><a href="login11.html"><b>Login</b></a></li>
+                <li><a href="#" onclick="logoutUser()"><b>Logout</b></a></li>
+            </ul>
+        </li>
+                <li><a href="booking.html"><i class="fas fa-ticket-alt nav-icon"></i><b>Guide Booking</b></a></li>
+                <li><a href="contactus.html"><i class="fa-solid fa-phone"></i><b> Contact Us</b></a></li>
+                <li><a href="feedback.html"><i class="fas fa-comments nav-icon"></i><b>Feedback</b></a></li>
+                
+</ul>
+</nav> 
+  
+    </header>
+        </div>
+    </div>
+<br>
+<h1><center>Tamilnadu</center></h1>
+<br>
+<br>
+<button onclick="showCategory('forts')">Go to Historical Forts</button>
+<button onclick="showCategory('religious')">Go to Religious Places</button>
+<button onclick="showCategory('monuments')">Go to Monuments & Heritage sites</button>
+<br><br>
+<h2 id="fort-section"><b><center>Historical Forts</center></b></h2>
+<section class="categories">   
+    <div class="category">
+        <img src="../images/tam1.jpg"alt="Vegetable">
+        <h2>Vellore Fort – Vellore
+        </h2>
+
+          <br>
+        </h2>
+        <p><b>Info: A 16th-century fort built by the Vijayanagara rulers, known for its strong granite walls.
+
+            Opening Hours: 8:00 AM – 6:00 PM
+            
+            Entry Fee: Free
+            
+            
+            </b></p>
+            
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.791961086217!2d79.1268960793457!3d12.921088600000012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bad38c0e6c1ab13%3A0xd40e80182e86caa3!2sVellore%20Fort%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1741689515475!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <a href="booking.html" class="btn">Book Now</a>
+    </div>
+    <div class="category">
+        <img src="../images/tam2.jpg"alt="Fruits">
+        <h2>Gingee Fort – Villupuram
+        </h2>
+        <p><b>
+            Info: A massive fort known as the "Troy of the East," built by the Cholas and later expanded by the Marathas.
+
+Opening Hours: 9:00 AM – 5:00 PM
+
+Entry Fee: ₹25 (Indians), ₹300 (Foreigners)
+
+            </b></p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7797.946244663695!2d79.38531979357911!3d12.250098100000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5335a5ee21a723%3A0x420a331e9420087f!2sGingee%20Fort!5e0!3m2!1sen!2sin!4v1741689598254!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <a href="booking.html" class="btn">Book Now</a>
+    </div>
+        <div class="category">
+            <img src="../images/tam3.jpg" alt="Rice">
+            <h2> Dindigul Fort – Dindigul
+
+            </h2>
+            <p><b>
+                Info: A historic hill fort with connections to Tipu Sultan and the British.
+
+Opening Hours: 9:00 AM – 5:30 PM
+
+Entry Fee: ₹20 (Indians), ₹200 (Foreigners)
+
+
+</b></p><br>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3924.7709794772927!2d77.95986127479873!3d10.360188389764417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00aaefd80aee8b%3A0x36e7090838343e37!2sDindigul%20Rock%20Fort!5e0!3m2!1sen!2sin!4v1741689701092!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <a href="booking.html" class="btn">Book Now</a>
+        </div>
+    </section>
+        <br>
+        <br>
+        <br>
+        <br>
+                    
+<h2 id="religious-section"><b><center>Religious Places</center></b></h2>
+<section class="categories">
+        <div class="category">
+            <<img src="../images/tam5.jpg" alt="Oil">
+            <h2> Meenakshi Temple – Madurai
+
+
+
+            </h2>
+            <p><b>
+                Info: A magnificent Dravidian-style temple dedicated to Goddess Meenakshi and Lord Sundareswarar.
+
+Opening Hours: 5:00 AM – 12:30 PM, 4:00 PM – 9:30 PM
+
+Entry Fee: Free (Special Darshan: ₹50 – ₹200)
+
+
+
+
+                </b></p>
+                <br>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3930.1767122714227!2d78.11673022479245!3d9.919236240182101!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00c5443233c9ed%3A0x659589b7cc517019!2sMadurai%20Meenakshi%20Amman%20Temple%2C%20East%20Tower!5e0!3m2!1sen!2sin!4v1741689855548!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <a href="booking.html" class="btn">Book Now</a>
+        </div>
+    
+        <div class="category">
+            <img src="../images/tam4.jpg" alt="Oil">
+            <h2>Ramanathaswamy Temple – Rameswaram
+
+
+            </h2>
+            <p><b>
+                
+                Info: One of the 12 Jyotirlingas, famous for its long corridor and sacred water tanks.
+
+                Opening Hours: 5:00 AM – 1:00 PM, 3:00 PM – 9:00 PM
+                
+                Entry Fee: Free
+                
+
+
+                </b></p><br>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3937.508694136593!2d79.31481697478401!3d9.288113590783947!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b01e3dc4949ac6d%3A0x9ffdab70cc4aa4ba!2sSri%20Arulmigu%20Ramanathaswamy%20Temple!5e0!3m2!1sen!2sin!4v1741689954788!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <a href="booking.html" class="btn">Book Now</a>
+            </div>
+        <div class="category">
+            <img src="../images/tam6.jpg" alt="Oil">
+            <h2> Kanchipuram Temples – Kanchipuram
+
+
+
+            </h2>
+            <p><b> 
+                Info: A collection of ancient temples like Kamakshi Amman, Ekambareswarar, and Kailasanathar, known as the "City of Temples."
+
+Opening Hours: 6:00 AM – 12:00 PM, 4:00 PM – 8:30 PM
+
+Entry Fee: Free
+
+
+
+                </b></p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.0611778593584!2d79.70193307792208!3d12.839323255140787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52c25a0596ac4b%3A0x77aa91535a4ea1c7!2sTemple!5e0!3m2!1sen!2sin!4v1741690227069!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <a href="booking.html" class="btn">Book Now</a>
+        </div>
+        </section>
+       <br>
+       <br>
+       
+       <h2 id="monuments-section"><b><center>Monuments & Heritage sites</center></b></h2>
+<section class="categories">
+
+       <div class="category" >
+        <img src="../images/tam7.jpg" alt="Millets">
+        <h2>. Brihadeeswarar Temple – Thanjavur
+
+
+        </h2>
+        <br>
+       
+        <p><b>
+            Info: A UNESCO World Heritage Site, this grand Chola temple is dedicated to Lord Shiva.
+
+            Opening Hours: 6:00 AM – 12:30 PM, 4:00 PM – 8:30 PM
+            
+            Entry Fee: Free
+            
+            
+            
+
+            
+            </b></p>
+            <br>
+           
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1959.684836940872!2d79.13058043853779!3d10.782972747341564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baab89f48fe1221%3A0x1d23cb40e55d84d6!2sBrihadeeswara%20Temple!5e0!3m2!1sen!2sin!4v1741690091789!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+         <a href="booking.html" class="btn">Book Now</a>
+        </div>
+
+    <div class="category">
+        <img src="../images/tam8.jpg" alt="Oil">
+        <h2>Thirumalai Nayakkar Mahal – Madurai
+
+
+
+        </h2>
+        <p><b>
+            Info: A stunning 17th-century palace built by King Thirumalai Nayak, known for its Indo-Saracenic architecture.
+
+            Opening Hours: 9:00 AM – 5:00 PM
+            
+            Entry Fee: ₹10 (Indians), ₹250 (Foreigners)
+            
+            
+            
+            
+            
+            
+            </b></p>
+           <br>
+           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3930.2264330841413!2d78.1211733747924!3d9.915090390186023!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00c59d167a4b05%3A0x662a4377ed8bdea4!2sThirumalai%20Nayakkar%20Palace%2C%20Panthadi%201st%20St%2C%20Mahal%20Area%2C%20Madurai%20Main%2C%20Madurai%2C%20Tamil%20Nadu%20625001!5e0!3m2!1sen!2sin!4v1741690309088!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <a href="booking.html" class="btn">Book Now</a>
+    </div>
+    <div class="category">
+        <img src="../images/tam9.jpg" alt="Oil">
+        <h2>Vivekananda Rock Memorial – Kanyakumari
+
+
+        </h2>
+        <p><b>
+
+            Info: A historical monument where Swami Vivekananda meditated in 1892.
+
+            Opening Hours: 8:00 AM – 4:00 PM
+            
+            Entry Fee: ₹20 (Indians), ₹200 (Foreigners)
+            
+            
+            
+
+            
+            
+            
+            </b></p><br>
+            <br>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.231216488296!2d77.55099887744974!3d8.07788527119456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b04ed29495d24c1%3A0x7999eb8488b3a3c0!2sSwami%20Vivekananda%20Rock%20Memorial!5e0!3m2!1sen!2sin!4v1741690392580!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            
+        <a href="booking.html" class="btn">Book Now</a>
+    </div>
+        </div>
+    </section>
+    <script>
+        function logoutUser() {
+            sessionStorage.removeItem("loggedIn"); // Remove login session
+            alert("You have been logged out.");
+            window.location.href = "login11.html"; // Redirect to login page
+        }
+        function showCategory(category) {
+            if (category === 'monuments') {
+                document.getElementById("monuments-section").scrollIntoView({ behavior: 'smooth' });
+            } else if (category === 'forts') {  // Changed from 'fort' to 'forts'
+                document.getElementById("fort-section").scrollIntoView({ behavior: 'smooth' });
+            } else if (category === 'religious') {  // Changed 'Religious' to lowercase for consistency
+                document.getElementById("religious-section").scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+          </script>
+</body>
+</html>

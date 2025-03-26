@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"> 
+  <style>
+      body {
+     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-image: url('gud3.jpg'); /* Change to your image file */
+    background-size: cover; /* Cover entire screen */
+    background-position: center; /* Center the image */
+    background-attachment: fixed; /* Fixed background */
+
+      }
+.logo{
+    height: 90px;
+    width:90px;
+    border-radius:100px;
+}
+header {
+    background:  #5e2c04;
+    border-bottom: 2px solid #d1b392;
+    color: white;
+    font-size: 150%;
+    padding: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* Basic Navigation Bar Styling */
+nav {
+    background:  #5e2c04;
+    padding: 10px 0;
+}
+
+.nav-bar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+.nav-bar li {
+    position: relative;
+}
+
+.nav-bar li a {
+    text-decoration: none;
+    padding: 10px 20px;
+    color: white;
+    display: block;
+    font-size: 18px;
+}
+
+.nav-bar li a:hover {
+    background-color: #a67b5b;
+}
+/* Dropdown Menu Styling */
+.dropdown-menu {
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color:  #79443b;
+    display: none;
+    min-width: 150px;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-menu li {
+    border-bottom: 1px solid cornsilk;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 10px;
+    color: white;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #9f8170;
+}
+
+/* Show Dropdown on Hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+
+      .container {
+        margin: 50px auto;
+        max-width: 400px;
+        background: cornsilk;
+        padding: 20px;
+        border-radius: 8px;
+        text-align: center;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        overflow-y: auto;
+        max-height: 85vh;
+        margin-top: 60px;
+      }
+      
+.logout-btn {
+    position: absolute;
+    top: 120px;
+    right: 10px;
+    background-color: coral;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.logout-btn:hover {
+    background-color: hsl(16, 100%, 66%);;
+}
+      h2 {
+        text-align: center;
+        color: #2c3e50;
+      }
+
+      label {
+        font-weight: bold;
+        display: block;
+        margin: 10px 0 5px;
+      }
+
+      input, select, textarea {
+        width: 100%;
+        padding: 8px;
+        margin-top: 4px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 14px;
+        box-sizing: border-box;
+      }
+
+      input[type="number"] {
+        -moz-appearance: textfield;
+      }
+
+      .booking-type {
+        font-weight: bold;
+        padding: 10px;
+        text-align: center;
+        border-radius: 4px;
+        margin-top: 10px;
+        display: none;
+      }
+
+      .standard { background-color: #4CAF50; color: white; }
+      .premium { background-color: #ff9800; color: white; }
+      .vip { background-color: #d32f2f; color: white; }
+
+      .info-container {
+        margin-top: 10px;
+        padding: 10px;
+        background: #eef;
+        border-radius: 6px;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+        display: none;
+      }
+
+      .submit-btn {
+        background-color: coral;
+        color: white;
+        padding: 10px;
+        font-size: 14px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        width: 100%;
+        margin-top: 15px;
+      }
+
+      .submit-btn:hover {
+        background-color: hsl(16, 100%, 66%);
+      }
+
+      .success-message {
+        display: none;
+        padding: 15px;
+        background: #007bff;
+        color: white;
+        text-align: center;
+        border-radius: 5px;
+        margin-top: 10px;
+      }
+
+      .error-message {
+        display: none;
+        padding: 15px;
+        background: #e74c3c;
+        color: white;
+        text-align: center;
+        border-radius: 5px;
+        margin-top: 10px;
+      }
+
+      .scroll-container {
+        max-height: 400px;
+        overflow-y: auto;
+        padding-right: 10px;
+      }
+      label {
+        text-align: left;
+      }
+      </style>
+      </head>
+</body> 
+  
+  <header>
+    <img src="../images/logo.jpg" alt="Evergreen Organic Shop" class="logo">
+<h1>HISTORIA</h1>
+<nav>
+<ul class="nav-bar">
+    <li><a href="../index.html"><i class="fas fa-home nav-icon"></i><b>Home</b></a></li>
+    <li><a href="about1.html"><i class="fas fa-info-circle nav-icon"></i><b>About Us</b></a></li>
+    <li class="dropdown">
+        <a href="place.html"><i class="fas fa-map-marked-alt nav-icon"></i><b>Places&#9662;</b></a>
+      
+        <ul class="dropdown-menu">
+            <li><a href="maharashtra.html"><b>Maharashtra</b></a></li>
+            <li><a href="karnataka.html"><b>Karnataka</b></a></li>               
+            <li><a href="place.html"><b>See More</b></a></li>
+        </ul>
+
+
+    </li>
+    
+    </li>
+  </li>
+  <li class="dropdown">
+      <a href="login11.html"><i class="fa-solid fa-user"></i><b> Account&#9662;</b></a>
+      <ul class="dropdown-menu">
+          <li><a href="login11.html"><b>Login</b></a></li>
+          <li><a href="#" onclick="logoutUser()"><b>Logout</b></a></li>
+      </ul>
+  </li>
+            <li><a href="booking.html"><i class="fas fa-ticket-alt nav-icon"></i><b>Guide Booking</b></a></li>
+            <li><a href="contactus.html"><i class="fa-solid fa-phone"></i><b> Contact Us</b></a></li>
+            <li><a href="feedback.html"><i class="fas fa-comments nav-icon"></i><b>Feedback</b></a></li>
+            
+</ul>
+</nav> 
+
+</header>
+  <div class="container">
+   <h2>Book your Guide</h2> 
+   <form id="bookingForm"> 
+    <div class="scroll-container"> <label for="name">Full Name:</label> 
+     <input type="text" id="name" required> <label for="email">Email Address:</label> 
+     <input type="email" id="email" required> <label for="phone">Phone Number:</label> 
+     <input type="tel" id="phone" pattern="[0-9]{10}" maxlength="10" required> <label for="destination">Enter Historical Place:</label> 
+     <input type="text" id="destination" required placeholder="Enter the name of the place"><label for="visitDate">Preferred Date of Visit:</label> 
+     <input type="date" id="visitDate" required> <label for="visitors">Number of Visitors:</label> 
+     <input type="number" id="visitors" min="1" value="1" required> <label for="bookingType">Select Booking Type:</label> <select id="bookingType" onchange="showBookingInfo()" required> <option value="">--Choose a Category--</option> <option value="Standard">Standard - ₹500/person</option> <option value="Premium">Premium - ₹1200/person (Includes Fast Entry)</option> <option value="VIP">VIP - ₹3000/person (Personalized Food + Fast Entry)</option> </select> 
+     <div class="booking-type" id="bookingTypeDisplay"></div> <label for="guide">Select a Guide (Optional):</label> <select id="guide" onchange="showGuideDetails()"> <option value="">--Select a Guide--</option> <option value="Rajesh Kumar">Rajesh Kumar</option> <option value="Priya Sharma">Priya Sharma</option> <option value="Anil Verma">Anil Verma</option> <option value="Sunita Joshi">Sunita Joshi</option> </select> 
+     <div class="info-container" id="guideDetails"> 
+      <h3>Guide Details</h3> 
+      <p><strong>Name:</strong> <span id="guideName"></span></p> 
+      <p><strong>Languages:</strong> <span id="guideLanguages"></span></p> 
+      <p><strong>Phone:</strong> <span id="guidePhone"></span></p> 
+      <p><strong>Email:</strong> <span id="guideEmail"></span></p> 
+      <p><strong>Fee:</strong> ₹<span id="guideFee"></span></p> 
+     </div> <label for="specialRequests">Special Requests (Optional):</label> <textarea id="specialRequests"></textarea> 
+    </div> <button type="submit" class="submit-btn">Book Now</button> 
+    <div class="success-message" id="successMessage">
+      Booking successful! A confirmation email has been sent. 
+    </div> 
+    <div class="error-message" id="errorMessage">
+      Please fill out all required fields correctly. 
+    </div> 
+   </form> 
+  </div> 
+  <script>
+    // Redirect to login page if not logged in
+window.onload = function () {
+    if (sessionStorage.getItem("loggedIn") !== "true") {
+        alert("Please log in first to book a guide!");
+        window.location.href = "login11.html"; // Redirect to login page
+    }
+};
+function logoutUser() {
+    sessionStorage.removeItem("loggedIn"); // Clear login session
+    alert("You have been logged out!");
+    window.location.href = "login11.html"; // Redirect to login page
+}
+      document.getElementById("visitDate").setAttribute("min", new Date().toISOString().split('T')[0]);
+
+      function showBookingInfo() {
+        const type = document.getElementById("bookingType").value;
+        const display = document.getElementById("bookingTypeDisplay");
+
+        if (type) {
+          display.className = "booking-type " + type.toLowerCase();
+          display.innerHTML = type + " Booking Selected - Includes various benefits.";
+          display.style.display = "block";
+        } else {
+          display.style.display = "none";
+        }
+      }
+
+      const guides = {
+        "Rajesh Kumar": { phone: "+91 9876543210", email: "rajeshkumar@gmail.com", languages: "English, Hindi", fee: "500" },
+        "Priya Sharma": { phone: "+91 8765432109", email: "priyasharma@gmail.com", languages: "English, Marathi", fee: "700" },
+        "Anil Verma": { phone: "+91 7654321098", email: "anilverma@gmail.com", languages: "Hindi, French", fee: "600" },
+        "Sunita Joshi": { phone: "+91 6543210987", email: "sunitajoshi@gmail.com", languages: "English, Gujarati", fee: "750" }
+      };
+
+      function showGuideDetails() {
+        const selectedGuide = document.getElementById("guide").value;
+        if (guides[selectedGuide]) {
+          document.getElementById("guideName").textContent = selectedGuide;
+          document.getElementById("guideLanguages").textContent = guides[selectedGuide].languages;
+          document.getElementById("guidePhone").textContent = guides[selectedGuide].phone;
+          document.getElementById("guideEmail").textContent = guides[selectedGuide].email;
+          document.getElementById("guideFee").textContent = guides[selectedGuide].fee;
+          document.getElementById("guideDetails").style.display = "block";
+        }
+      }
+
+      document.getElementById("bookingForm").addEventListener("submit", function(e) {
+    e.preventDefault(); // Prevent default form submission
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const destination = document.getElementById("destination").value;
+    const visitDate = document.getElementById("visitDate").value;
+    const visitors = document.getElementById("visitors").value;
+    const bookingType = document.getElementById("bookingType").value;
+
+    // Hide previous messages
+    document.getElementById("errorMessage").style.display = "none";
+    document.getElementById("successMessage").style.display = "none";
+
+    if (!name || !email || !phone || !destination || !visitDate || !visitors || !bookingType) {
+        document.getElementById("errorMessage").style.display = "block";
+        return; // Stop further execution
+    } 
+
+    document.getElementById("successMessage").style.display = "block";
+
+    // Delay form reset to allow user to see success message
+    setTimeout(() => {
+        document.getElementById("bookingForm").reset();
+        document.getElementById("successMessage").style.display = "none";
+    }, 3000);
+});
+
+    </script> 
+ </body>
+</html>

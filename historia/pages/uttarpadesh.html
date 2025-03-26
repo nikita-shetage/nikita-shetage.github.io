@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="../css/style1.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="container">
+    <header>
+        <img src="../images/logo.jpg" alt="Historia" class="logo">
+<h1>Historia</h1>
+<nav>
+    <ul class="nav-bar">
+        <li><a href="../index.html"><b>Home</b></a></li>
+        <li><a href="about1.html"><b>About Us</b></a></li>
+        <li class="dropdown">
+            <a href="place.html"><b>Places&#9662;</b></a>
+          
+            <ul class="dropdown-menu">
+                <li><a href="maharashtra.html"><b>Maharashtra</b></a></li>
+                <li><a href="karnataka.html"><b>Karnataka</b></a></li>               
+                <li><a href="place.html"><b>See More</b></a></li>
+            </ul>
+    
+
+        </li>
+        
+        </li>
+        <li class="dropdown">
+            <a href="#"><i class="fa-solid fa-user"></i><b> Account&#9662;</b></a>
+            <ul class="dropdown-menu">
+                <li><a href="login11.html"><b>Login</b></a></li>
+                <li><a href="#" onclick="logoutUser()"><b>Logout</b></a></li>
+            </ul>
+        </li>
+                <li><a href="booking.html"><i class="fas fa-ticket-alt nav-icon"></i><b>Guide Booking</b></a></li>
+                <li><a href="contactus.html"><i class="fa-solid fa-phone"></i><b> Contact Us</b></a></li>
+                <li><a href="feedback.html"><b>Feedback</b></a></li>
+                
+</ul>
+</nav> 
+  
+    </header>
+        </div>
+    </div>
+<br>
+<h1><center>Uttar Pradesh</center></h1>
+<br>
+<br>
+<button onclick="showCategory('forts')">Go to Historical Forts</button>
+<button onclick="showCategory('religious')">Go to Religious Places</button>
+<button onclick="showCategory('monuments')">Go to Monuments & Heritage sites</button>
+<br><br>
+<h2 id="fort-section"><b><center>Historical Forts</center></b></h2>
+<section class="categories"> 
+    <div class="category">
+        <img src="../images/upp1.jpg"alt="Vegetable">
+        <h2>Janshi Fort – 
+          <br>Bundelkhand</h2>
+        <p><b>
+            Info: A historic fort associated with Rani Lakshmibai, featuring battlements, temples, and a museum.
+
+Opening Hours: 6:00 AM – 6:00 PM
+
+Entry Fee: ₹25 (Indians), ₹300 (Foreigners)
+            
+            </b></p>
+            
+            <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3602.423940833751!2d78.57394317517253!3d25.457515777544366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sJhansi%20fort!5e0!3m2!1sen!2sin!4v1741689808715!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <a href="booking.html" class="btn">Book Now</a>
+    </div>
+
+    <div class="category">
+        <img src="../images/upp2.jpg"alt="Fruits">
+        <h2> Agra Fort– <br>Agra</h2>
+        <p><b>
+            Info: A UNESCO World Heritage Site and a grand Mughal fort that served as the main residence of the emperors.
+
+Opening Hours: 6:00 AM – 6:00 PM
+
+Entry Fee: ₹50 (Indians), ₹650 (Foreigners)
+
+            </b></p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3549.2583568057007!2d78.01843557523415!3d27.17961557648906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397470d491343beb%3A0x640a5ccc94029576!2sAgra%20Fort!5e0!3m2!1sen!2sin!4v1741690043567!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <a href="booking.html" class="btn">Book Now</a>
+    </div>
+
+        <div class="category">
+            <img src="../images/upp3.jpg" alt="Rice">
+            <h2>Chunar Fort  – <br>Mirzapur</h2>
+            <p><b>
+                Info: A strategically located fort with a history dating back to the Maurya period, later used by the Mughals and British.
+
+Opening Hours: 6:00 AM – 6:00 PM
+
+Entry Fee: Free
+
+
+</b></p>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3612.364572474757!2d82.873159475161!3d25.12336247775857!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398fca9ab966d9b7%3A0xe7373052fefe2f1d!2sChunar%20Fort!5e0!3m2!1sen!2sin!4v1741690191266!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<a href="booking.html" class="btn">Book Now</a>
+        </div>
+    </section>
+        <br>
+        <br>
+        <br>
+        <br>
+        
+        <h2 id="religious-section"><b><center>Religious Places</center></b></h2>
+        <section class="categories">
+        <div class="category">
+            <img src="../images/upp4.jpg" alt="Oil">
+            <h2> Kashi Vishvnath Temple – Varanasi
+
+            </h2>
+            <p><b>
+                Info: One of the 12 Jyotirlingas, dedicated to Lord Shiva.
+
+Opening Hours: 4:00 AM – 11:00 PM
+
+Entry Fee: Free
+
+                </b></p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3606.857869168547!2d83.00904212516738!3d25.308978927639103!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398e2e21ee940b17%3A0x48600e4fcdfb7b13!2sShri%20Kashi%20Vishwanath%20Temple!5e0!3m2!1sen!2sin!4v1741690745072!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <a href="booking.html" class="btn">Book Now</a>   <br>
+        </div>
+    
+        <div class="category">
+            <img src="../images/upp5.jpg" alt="Oil">
+            <h2>Ram Mandir – Ayodhya
+            </h2>
+            <p><b>
+                Info: The grand temple dedicated to Lord Ram, a major Hindu pilgrimage site.
+
+                Opening Hours: 7:00 AM – 11:00 AM, 2:00 PM – 7:00 PM
+                
+                Entry Fee: Free  
+                
+
+                </b></p><br>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24492.131623882207!2d82.18774073936723!3d26.79520532741926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399a07cd3079f0bf%3A0x5589e823b23ba9dc!2sShree%20Ram%20Janmabhoomi%20Mandir!5e0!3m2!1sen!2sin!4v1741691264345!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <a href="booking.html" class="btn">Book Now</a>
+            </div>
+
+        <div class="category">
+            <img src="../images/upp6.jpg" alt="Oil">
+            <h2>Vrundavan Temple – Mathura
+            </h2>
+            <p><b> 
+                Info: Birthplace of Lord Krishna, home to many temples like Banke Bihari Temple and ISKCON.
+
+Opening Hours: 6:00 AM – 9:00 PM
+
+Entry Fee: Free
+                </b></p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56587.21636488588!2d77.67192800992396!3d27.571787857356412!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39736fb46ad6718b%3A0x59edc7620411f9f3!2sPrem%20Mandir%2C%20Vrindavan!5e0!3m2!1sen!2sin!4v1741691493859!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <a href="booking.html" class="btn">Book Now</a>
+        </div>
+        </section>
+       <br>
+       <br>
+       <h2 id="monuments-section"><b><center>Monuments & Heritage sites</center></b></h2>
+       <section class="categories">
+
+       <div class="category" >
+        <img src="../images/upp7.jpg" alt="Millets">
+        <h2>Taj Mahal –Agra</h2>
+        <br>
+       
+        <p><b>
+
+            Info: One of the Seven Wonders of the World, built by Shah Jahan in memory of Mumtaz Mahal.
+
+Opening Hours: 6:00 AM – 6:30 PM (Closed on Fridays)
+
+Entry Fee: ₹50 (Indians), ₹1,100 (Foreigners)
+
+
+
+
+            
+            </b></p>
+            <br>
+           
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3549.4005535620063!2d78.04214216036003!3d27.175144792076196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39747121d702ff6d%3A0xdd2ae4803f767dde!2sTaj%20Mahal!5e0!3m2!1sen!2sin!4v1741691747677!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <a href="booking.html" class="btn">Book Now</a>
+        </div>
+
+    <div class="category">
+        <img src="../images/upp8.jpg" alt="Oil">
+        <h2>Fatehpur Sikri – Agra
+        </h2>
+        <p><b>
+            Info: A UNESCO-listed abandoned Mughal capital, famous for Buland Darwaza.
+
+            Opening Hours: 6:00 AM – 6:30 PM
+            
+            Entry Fee: ₹50 (Indians), ₹600 (Foreigners)
+            
+            
+            </b></p><br>
+           <br>
+           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d84303.89664330111!2d77.68433365198787!3d27.077152058275935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397391584a53798d%3A0x893d46790c1fb40!2sFatehpur%20Sikri%2C%20Uttar%20Pradesh%20283110!5e0!3m2!1sen!2sin!4v1741691931552!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+           <a href="booking.html" class="btn">Book Now</a>
+    </div>
+    <div class="category">
+        <img src="../images/upp9.jpg" alt="Oil">
+        <h2>Bara Imambara – Luknow
+        </h2>
+        <p><b>
+
+            Info: An architectural marvel with a massive central hall and Bhool Bhulaiya (maze).
+
+Opening Hours: 6:00 AM – 6:00 PM
+
+Entry Fee: ₹50 (Indians), ₹500 (Foreigners)
+
+
+
+            
+            
+            </b></p><br>
+            <br>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.101479200424!2d80.91013777522275!3d26.868516776673452!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399bfdee2b778b71%3A0x352e3d138a28173f!2sBara%20Imambara!5e0!3m2!1sen!2sin!4v1741692086890!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>            
+        <a href="booking.html" class="btn">Book Now</a>
+    </div>
+        </div>
+    </section>
+    <script>
+        function logoutUser() {
+            sessionStorage.removeItem("loggedIn"); // Remove login session
+            alert("You have been logged out.");
+            window.location.href = "login11.html"; // Redirect to login page
+        }
+        function showCategory(category) {
+            if (category === 'monuments') {
+                document.getElementById("monuments-section").scrollIntoView({ behavior: 'smooth' });
+            } else if (category === 'forts') {  // Changed from 'fort' to 'forts'
+                document.getElementById("fort-section").scrollIntoView({ behavior: 'smooth' });
+            } else if (category === 'religious') {  // Changed 'Religious' to lowercase for consistency
+                document.getElementById("religious-section").scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+          </script>
+</body>
+</html>

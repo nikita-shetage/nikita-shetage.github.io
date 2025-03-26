@@ -1,0 +1,369 @@
+<!doctype html>
+<html> 
+ <head> 
+  <title>Register &amp; Login | Historia</title> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> 
+  <!-- ✅ Font Awesome for Icons -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">  
+  <style>
+    body {
+     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-image: url('log2.jpg'); /* Change to your image file */
+    background-size: cover; /* Cover entire screen */
+    background-position: center; /* Center the image */
+    background-attachment: fixed; /* Fixed background */
+
+      }
+   header {
+    background: #5e2c04;
+    color: white;
+    font-size: 150%;
+    padding: 15px 50px;  /* Increased left & right padding */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* Navigation Styling */
+nav {
+    width: 100%;
+    background: #5e2c04;
+    padding: 10px 0;
+}
+
+.nav-bar {
+    list-style: none;
+    width: 100%;
+    max-width: 1250px; /* Added a max-width for proper spacing */
+    margin: 0 auto;  /* Centering the nav-bar */
+    display: flex;
+    justify-content: space-between;
+    padding: 0; /* Added left & right padding */
+}
+
+.nav-bar li {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.nav-bar li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 10px 20px; /* Slightly increased padding */
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.logo {
+    height: 90px;
+    width: 90px;
+    border-radius: 100px;
+}
+
+.nav-bar li a:hover {
+    background-color: #a67b5b;
+}
+/* Dropdown Menu Styling */
+.dropdown-menu {
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color:  #79443b;
+    display: none;
+    min-width: 150px;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-menu li {
+    border-bottom: 1px solid cornsilk;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 10px;
+    color: white;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #9f8170;
+}
+
+/* Show Dropdown on Hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+        
+        /* Centering the form */
+.form-box {
+    max-width: 400px;
+    padding: 20px;
+    background: cornsilk;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 50px;
+    position: relative;
+}
+
+/* Headings */
+h1 {
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: black;
+    font-weight: bold;
+}
+
+/* Input Boxes */
+.textbox {
+    width: 100%;
+    margin: 12px 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    background: white;
+}
+
+/* Input Field Styling */
+.textbox input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background: transparent;
+}
+
+/* Icons inside Input */
+.textbox .glyphicon {
+    margin-right: 10px;
+    color: #555;
+}
+
+/* Show/Hide Password Icon */
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Buttons */
+.btn-custom {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    background: coral;
+    transition: 0.3s;
+}
+
+.btn-custom:hover {
+    background: hsl(16, 72%, 43%);
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+    .form-box {
+        width: 90%;
+        margin-top: 30px;
+    }
+}
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            backdrop-filter: blur(5px);
+            color: white;
+            z-index: 2;
+        }
+    </style> 
+ </head> 
+ <body>
+    <div class="navbar">
+        <div class="container">
+    <header>
+        <img src="../images/logo.jpg" alt="Evergreen Organic Shop" class="logo">
+<h1>HISTORIA</h1>
+<nav>
+    <ul class="nav-bar">
+        <li><a href="../index.html"><i class="fas fa-home nav-icon"></i><b>Home</b></a></li>
+        <li><a href="about1.html"><i class="fas fa-info-circle nav-icon"></i><b>About Us</b></a></li>
+        <li class="dropdown">
+            <a href="place.html"><i class="fas fa-map-marked-alt nav-icon"></i><b>Places&#9662;</b></a>
+          
+            <ul class="dropdown-menu">
+                <li><a href="maharashtra.html"><b>Maharashtra</b></a></li>
+                <li><a href="karnataka.html"><b>Karnataka</b></a></li>               
+                <li><a href="place.html"><b>See More</b></a></li>
+            </ul>
+    
+
+        </li>
+        
+        </li>
+        <li class="dropdown">
+            <a href="login11.html"><i class="fa-solid fa-user"></i><b> Account&#9662;</b></a>
+            <ul class="dropdown-menu">
+                <li><a href="login11.html"><b>Login</b></a></li>
+                <li><a href="#" onclick="logoutUser()"><b>Logout</b></a></li>
+            </ul>
+        </li>
+                <li><a href="booking.html"><i class="fas fa-ticket-alt nav-icon"></i><b>Guide Booking</b></a></li>
+                <li><a href="contactus.html"><i class="fa-solid fa-phone"></i><b> Contact Us</b></a></li>
+                <li><a href="feedback.html"><i class="fas fa-comments nav-icon"></i><b>Feedback</b></a></li>
+                
+</ul>
+</nav> 
+  
+    </header>
+        </div>
+    </div>
+         <!-- Register Form --> 
+  <form class="form-box" id="registerForm" onsubmit="return registerUser()"> 
+   <h2>Register</h2> 
+   <div class="textbox"> <span class="glyphicon glyphicon-user"></span> 
+    <input type="text" id="regName" placeholder="Full Name" required> 
+   </div> 
+   <div class="textbox"> <span class="glyphicon glyphicon-envelope"></span> 
+    <input type="email" id="regEmail" placeholder="Email" required> 
+   </div> 
+   <div class="textbox"> <span class="glyphicon glyphicon-lock"></span> 
+    <input type="password" id="regPassword" placeholder="Password" required> <span class="glyphicon glyphicon-eye-open toggle-password" onclick="togglePassword('regPassword', this)"></span> 
+   </div> <button type="submit" class="btn btn-custom">Register</button> 
+   <p>Already have an account? <a href="#" onclick="showLogin()">Login</a></p> 
+  </form> <!-- Login Form --> 
+  <form class="form-box hidden" id="loginForm" onsubmit="return loginUser()"> 
+   <h2>Login</h2> 
+   <div class="textbox"> <span class="glyphicon glyphicon-envelope"></span> 
+    <input type="email" id="loginEmail" placeholder="Email" required> 
+   </div> 
+   <div class="textbox"> <span class="glyphicon glyphicon-lock"></span> 
+    <input type="password" id="loginPassword" placeholder="Password" required> <span class="glyphicon glyphicon-eye-open toggle-password" onclick="togglePassword('loginPassword', this)"></span> 
+   </div> 
+   <br> <button type="submit" class="btn btn-custom">Sign in</button> 
+   <p>Don't have an account? <a href="#" onclick="showRegister()">Register</a></p> 
+  </form> 
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Historia. All rights reserved.</p>
+</footer>
+
+  <script>
+    function registerUser() {
+        var name = document.getElementById("regName").value;
+        var email = document.getElementById("regEmail").value;
+        var password = document.getElementById("regPassword").value;
+
+        if (name && email && password) {
+            localStorage.setItem("userName", name);
+            localStorage.setItem("userEmail", email);
+            localStorage.setItem("userPassword", password);
+            alert("Registration Successful! Now log in.");
+            showLogin();
+            return false;
+        } else {
+            alert("Please fill in all fields.");
+            return false;
+        }
+    }
+
+    function loginUser() {
+        var email = document.getElementById("loginEmail").value;
+        var password = document.getElementById("loginPassword").value;
+        var storedEmail = localStorage.getItem("userEmail");
+        var storedPassword = localStorage.getItem("userPassword");
+
+        // ✅ If no account exists, show error and redirect to Register page
+        if (!storedEmail || !storedPassword) {
+            alert("Please register first. No account found.");
+            showRegister(); // Redirects to the Register form
+            return false;
+        }
+
+        if (email === storedEmail && password === storedPassword) {
+            alert("Logged In Successfully!");
+            sessionStorage.setItem("loggedIn", "true");
+
+            // Redirect to the booking page
+            window.location.href = "booking.html"; // Change this to your actual booking page URL
+            return false;
+        } else {
+            alert("Invalid credentials. Please try again.");
+            return false;
+        }
+    }
+    function logoutUser() {
+    sessionStorage.removeItem("loggedIn"); // Remove login session
+    alert("You have been logged out.");
+    window.location.href = "login11.html"; // Redirect to login page
+}
+
+    function togglePassword(fieldId, icon) {
+        var passwordField = document.getElementById(fieldId);
+
+        if (passwordField.type === "password") {
+            passwordField.type = "text";
+            icon.classList.remove("glyphicon-eye-open");
+            icon.classList.add("glyphicon-eye-close");
+        } else {
+            passwordField.type = "password";
+            icon.classList.remove("glyphicon-eye-close");
+            icon.classList.add("glyphicon-eye-open");
+        }
+    }
+
+    function showLogin() {
+        document.getElementById("registerForm").classList.add("hidden");
+        document.getElementById("loginForm").classList.remove("hidden");
+    }
+
+    function showRegister() {
+        document.getElementById("loginForm").classList.add("hidden");
+        document.getElementById("registerForm").classList.remove("hidden");
+    }
+
+    window.onload = function () {
+        if (sessionStorage.getItem("loggedIn")) {
+            alert("You are already logged in!");
+        } else {
+            showRegister(); // ✅ Always show Register first
+        }
+    };
+  </script> 
+ </body>
+</html>

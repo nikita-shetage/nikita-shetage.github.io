@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="../css/style1.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="container">
+    <header>
+        <img src="../images/logo.jpg" alt="Evergreen Organic Shop" class="logo">
+<h1>HISTORIA</h1>
+<nav>
+    <ul class="nav-bar">
+        <li><a href="../index.html"><i class="fas fa-home nav-icon"></i><b>Home</b></a></li>
+        <li><a href="about1.html"><i class="fas fa-info-circle nav-icon"></i><b>About Us</b></a></li>
+        <li class="dropdown">
+            <a href="place.html"><i class="fas fa-map-marked-alt nav-icon"></i><b>Places&#9662;</b></a>
+          
+            <ul class="dropdown-menu">
+                <li><a href="maharashtra.html"><b>Maharashtra</b></a></li>
+                <li><a href="karnataka.html"><b>Karnataka</b></a></li>               
+                <li><a href="place.html"><b>See More</b></a></li>
+            </ul>
+    
+
+        </li>
+        
+        </li>
+        <li class="dropdown">
+            <a href="#"><i class="fa-solid fa-user"></i><b> Account&#9662;</b></a>
+            <ul class="dropdown-menu">
+                <li><a href="login11.html"><b>Login</b></a></li>
+                <li><a href="#" onclick="logoutUser()"><b>Logout</b></a></li>
+            </ul>
+        </li>
+                <li><a href="booking.html"><i class="fas fa-ticket-alt nav-icon"></i><b>Guide Booking</b></a></li>
+                <li><a href="contactus.html"><i class="fa-solid fa-phone"></i><b> Contact Us</b></a></li>
+                <li><a href="feedback.html"><i class="fas fa-comments nav-icon"></i><b>Feedback</b></a></li>
+                
+</ul>
+</nav> 
+  
+    </header>
+        </div>
+    </div>
+<br>
+<h1><center>Maharashtra</center></h1>
+<br>
+<br>
+<button onclick="showCategory('forts')">Go to Historical Forts</button>
+<button onclick="showCategory('religious')">Go to Religious Places</button>
+<button onclick="showCategory('monuments')">Go to Monuments & Heritage sites</button>
+<br><br>
+<h2 id="fort-section"><b><center>Historical Forts</center></b></h2>
+<section class="categories"> 
+    <div class="category">
+        <img src="../images/maha2.jpg"alt="Vegetable">
+        <h2>Raigad Fort – 
+          <br>  Raigad</h2>
+        <p><b>
+            Info: The capital of Chhatrapati Shivaji Maharaj’s empire, offering stunning views and history.
+            
+            Opening Hours: 7:00 AM – 6:00 PM
+            
+            Entry Fee: ₹30 (Indians), ₹300 (Foreigners)</b></p>
+            
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3789.487335762952!2d73.43811537495557!3d18.23346788280522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be8283eb38b1ce5%3A0xfc31826ad34a5b70!2sRaigad%20Fort!5e0!3m2!1sen!2sin!4v1741181794279!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <a href="booking.html" class="btn">Book Now</a>
+    </div>
+    <div class="category">
+        <img src="../images/maha1.jpg"alt="Fruits">
+        <h2>Sindhudurg Fort – <br>Sindhudurg</h2>
+        <p><b>
+        Info: A sea fort built by Shivaji Maharaj, known for its hidden escape routes and historic cannons.
+        
+        Opening Hours: 8:00 AM – 5:30 PM
+        Entry Fee: ₹50 (Indians), ₹200 (Foreigners)</b></p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3834.4256633660393!2d73.45842047490352!3d16.043386284632383!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3beaa82170000001%3A0xd9f190e26c66ce46!2sSindhudurg%20Fort!5e0!3m2!1sen!2sin!4v1741181901965!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <a href="booking.html" class="btn">Book Now</a>
+    </div>
+        <div class="category">
+            <img src="../images/maha3.jpg" alt="Rice">
+            <h2>Pratapgad Fort – <br>Satara</h2>
+            <p><b>
+                Info: The site of the famous Battle of Pratapgad between Shivaji and Afzal Khan in 1659.
+                
+                Opening Hours: 6:00 AM – 6:00 PM
+                
+                Entry Fee: Free
+                
+                </b></p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3795.8935411978914!2d73.5756258749482!3d17.93711868304683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bb8fc57af9f1%3A0xcd7f0daa3666eb!2sPratapgad%20Fort!5e0!3m2!1sen!2sin!4v1741182113820!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <a href="booking.html" class="btn">Book Now</a>
+        </div>
+    </section>
+        <br>
+        <br>
+        <br>
+        <br>
+        
+            
+<h2 id="religious-section"><b><center>Religious Places</center></b></h2>
+<section class="categories">
+        <div class="category">
+            <img src="../images/maha13.jpg" alt="Oil">
+            <h2> Shirdi Sai Baba Temple – Ahmednagar</h2>
+            <p><b>
+                Info: One of the most visited spiritual sites dedicated to Sai Baba.
+                
+                Opening Hours: 4:00 AM – 11:00 PM
+                
+                Entry Fee: Free
+                </b></p>
+                <br>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3767.4630278711784!2d72.86407707498118!3d19.21864198201543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b7339c99f0e3%3A0x3afbfb74b5715ad5!2sSHRI%20SAIDHAM%20CHARITABLE%20TRUST%20(Reg.)!5e0!3m2!1sen!2sin!4v1741234624595!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <a href="booking.html" class="btn">Book Now</a>
+                
+                
+        </div>
+    
+        <div class="category">
+            <img src="../images/maha11.jpg" alt="Oil">
+            <h2>Trimbakeshwar Temple – Nashik</h2>
+            <p><b>
+                Info: One of the 12 Jyotirlingas of Lord Shiva, situated near the origin of the Godavari River.
+                
+                Opening Hours: 5:30 AM – 9:00 PM
+                
+                Entry Fee: Free
+                </b></p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3750.815952005579!2d73.52820737500036!3d19.93215918145679!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bddeb013af2e74b%3A0x716282a3a46b04cc!2sTrimbakeshwar%20Jyotirling%20Temple!5e0!3m2!1sen!2sin!4v1741234903650!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <a href="booking.html" class="btn">Book Now</a>
+        </div>
+        <div class="category">
+            <img src="../images/maha12.jpg" alt="Oil">
+            <h2>Grishneshwar Temple – Aurangabad</h2>
+            <p><b> 
+                Info: Another Jyotirlinga temple, known for its beautiful stone carvings and religious significance.
+                
+                Opening Hours: 5:30 AM – 9:30 PM
+                
+                Entry Fee: Free
+                </b></p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.6618601057853!2d72.86740397497633!3d19.034616182161457!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7cf00159a2661%3A0x918a34510b2408f0!2sGhrushneshwar%20Temple!5e0!3m2!1sen!2sin!4v1741235011231!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <a href="booking.html" class="btn">Book Now</a>
+        </div>
+        </section>
+       <br>
+       <br>
+       
+       <h2 id="monuments-section"><b><center>Monuments & Heritage sites</center></b></h2>
+<section class="categories">
+     <div class="category" >
+        <img src="../images/maha9.jpg" alt="Millets">
+        <h2>Gateway of India – Mumbai</h2>
+        <br>
+       
+        <p><b>
+
+            Info: A British-era monument built in 1924, symbolizing Mumbai’s rich colonial history.
+            
+            Opening Hours: Open 24/7
+            
+            Entry Fee: Free
+            
+            
+            </b></p>
+            <br>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3774.2125433647457!2d72.83207937497328!3d18.921984082251164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7d1c73a0d5cad%3A0xc70a25a7209c733c!2sGateway%20Of%20India%20Mumbai!5e0!3m2!1sen!2sin!4v1741235245780!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <a href="booking.html" class="btn">Book Now</a>
+    </div>
+
+    <div class="category">
+        <img src="../images/maha7.jpg" alt="Oil">
+        <h2>Chhatrapati Shivaji Terminus – Mumbai</h2>
+        <p><b>
+
+            Info: A UNESCO-listed railway station blending Victorian Gothic and Indian architectural styles.
+            
+            Opening Hours: 10:00 AM – 6:00 PM
+            
+            Entry Fee: ₹100 (Tour)
+            
+            </b></p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7547.445721466647!2d72.82976719120164!3d18.94365732893523!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7ce275b7ef28f%3A0x8bbbc6cd2f4f90d1!2sChhatrapati%20Shivaji%20Terminus%20Area%2C%20Fort%2C%20Mumbai%2C%20Maharashtra%20400001!5e0!3m2!1sen!2sin!4v1741235537430!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <a href="booking.html" class="btn">Book Now</a>
+    </div>
+    <div class="category">
+        <img src="../images/maha8.jpg" alt="Oil">
+        <h2>Elephanta Caves – Mumbai</h2>
+        <p><b>
+
+            Info: Ancient Hindu and Buddhist rock-cut caves featuring massive sculptures of Lord Shiva.
+            
+            Opening Hours: 9:00 AM – 5:30 PM (Closed on Mondays)
+            
+            Entry Fee: ₹40 (Indians), ₹600 (Foreigners)
+            
+            
+            </b></p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3773.277518004728!2d72.9289114749744!3d18.963347382218227!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c5307da3602f%3A0xf4ab181b1aaef53f!2sElephanta%20Caves!5e0!3m2!1sen!2sin!4v1741235713721!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <a href="booking.html" class="btn">Book Now</a>
+    </div>
+        </div>
+    </section>
+    <script>
+        function logoutUser() {
+            sessionStorage.removeItem("loggedIn"); // Remove login session
+            alert("You have been logged out.");
+            window.location.href = "login11.html"; // Redirect to login page
+        }
+        function showCategory(category) {
+    document.getElementById(category + "-section").scrollIntoView({ behavior: "smooth" });
+}
+        function showCategory(category) {
+            if (category === 'monuments') {
+                document.getElementById("monuments-section").scrollIntoView({ behavior: 'smooth' });
+            } else if (category === 'forts') {  // Changed from 'fort' to 'forts'
+                document.getElementById("fort-section").scrollIntoView({ behavior: 'smooth' });
+            } else if (category === 'religious') {  // Changed 'Religious' to lowercase for consistency
+                document.getElementById("religious-section").scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+          </script>
+</body>
+</html>

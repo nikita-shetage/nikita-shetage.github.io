@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="../css/style1.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="container">
+    <header>
+        <img src="../images/logo.jpg" alt="Historia" class="logo">
+<h1>Historia</h1>
+<nav>
+    <ul class="nav-bar">
+        <li><a href="../index.html"><b>Home</b></a></li>
+        <li><a href="about1.html"><b>About Us</b></a></li>
+        <li class="dropdown">
+            <a href="place.html"><b>Places&#9662;</b></a>
+          
+            <ul class="dropdown-menu">
+                <li><a href="maharashtra.html"><b>Maharashtra</b></a></li>
+                <li><a href="karnataka.html"><b>Karnataka</b></a></li>               
+                <li><a href="place.html"><b>See More</b></a></li>
+            </ul>
+    
+
+        </li>
+        
+        </li>
+        <li class="dropdown">
+            <a href="#"><i class="fa-solid fa-user"></i><b> Account&#9662;</b></a>
+            <ul class="dropdown-menu">
+                <li><a href="login11.html"><b>Login</b></a></li>
+                <li><a href="#" onclick="logoutUser()"><b>Logout</b></a></li>
+            </ul>
+        </li>
+                <li><a href="booking.html"><i class="fas fa-ticket-alt nav-icon"></i><b>Guide Booking</b></a></li>
+                <li><a href="contactus.html"><i class="fa-solid fa-phone"></i><b> Contact Us</b></a></li>
+                <li><a href="feedback.html"><b>Feedback</b></a></li>
+                
+</ul>
+</nav> 
+  
+    </header>
+        </div>
+    </div>
+<br>
+<h1><center>West Bengal</center></h1>
+<br>
+<br>
+<button onclick="showCategory('forts')">Go to Historical Forts</button>
+<button onclick="showCategory('religious')">Go to Religious Places</button>
+<button onclick="showCategory('monuments')">Go to Monuments & Heritage sites</button>
+<br><br>
+<h2 id="fort-section"><b><center>Historical Forts</center></b></h2>
+<section class="categories"> 
+    <div class="category">
+        <img src="../images/wb1.jpg"alt="Vegetable">
+        <h2>Fort William – 
+          <br>Kolkata</h2>
+        <p><b>
+  Info: A massive colonial-era fort built by the British in 1696, now serving as an army headquarters.
+
+Opening Hours: Restricted access (requires permission)
+
+Entry Fee: Not open to the public
+            </b></p>
+            
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14738.614955263994!2d88.32690814906249!3d22.55464017206893!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a02770cdd94d469%3A0x54600216db11cd27!2sFort%20William!5e0!3m2!1sen!2sin!4v1741701022470!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <a href="booking.html" class="btn">Book Now</a>
+    </div>
+
+    <div class="category">
+        <img src="../images/wb2.jpg"alt="Fruits">
+        <h2> Jalpaiguri Rajbari Fort– <br>Jalpaiguri</h2>
+        <p><b>
+            Info: A historical fort with Rajbari (royal palace) architecture, once home to the local rulers.
+
+            Opening Hours: 9:00 AM – 6:00 PM
+            
+            Entry Fee: Free
+                    
+            </b></p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3569.4202544353093!2d88.71503957521077!3d26.53876387687208!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e47965b4631e35%3A0xd342b9e5ce1ef7e!2sRajbari%20Palace!5e0!3m2!1sen!2sin!4v1741701844477!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <a href="booking.html" class="btn">Book Now</a>
+    </div>
+
+        <div class="category">
+            <img src="../images/wb3.jpg" alt="Rice">
+            <h2>Mukutmanipur Fort – <br>Bankura</h2>
+            <p><b>
+                Info: An old fort near the Mukutmanipur Dam, surrounded by lush greenery and scenic landscapes.
+
+                Opening Hours: 9:00 AM – 5:00 PM
+                
+                Entry Fee: Free                                                                 
+                           
+</b></p>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3350.071837433672!2d74.73808817546507!3d32.896268873614055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391e62fe019a1f47%3A0x9a3a85db14bcc629!2sAkhnoor%20Fort!5e0!3m2!1sen!2sin!4v1741698030003!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<a href="booking.html" class="btn">Book Now</a>
+        </div>
+    </section>
+        <br>
+        <br>
+        <br>
+        <br>
+                            
+<h2 id="religious-section"><b><center>Religious Places</center></b></h2>
+<section class="categories">
+        <div class="category">
+            <img src="../images/wb4.jpg" alt="Oil">
+            <h2>  Dakshineswar Kali Temple – Kolkata
+
+            </h2>
+            <p><b>
+                
+Info: A famous Hindu temple dedicated to Goddess Kali, associated with Sri Ramakrishna Paramahansa.
+
+Opening Hours: 5:00 AM – 8:00 PM
+
+Entry Fee: Free
+            </b></p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3681.9692676184463!2d88.35287147955552!3d22.654934426402892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f89d03ddd97829%3A0xffa380efed305d4c!2sDakshineswar%20Kali%20Temple!5e0!3m2!1sen!2sin!4v1741702170307!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <a href="booking.html" class="btn">Book Now</a>   <br>
+        </div>
+    
+        <div class="category">
+            <img src="../images/wb5.jpg" alt="Oil">
+            <h2>Kalighat Temple – Anatnag
+            </h2>
+            <p><b>
+                nfo: One of the 51 Shakti Peethas, dedicated to Goddess Kali and a major pilgrimage site.
+
+                Opening Hours: 5:00 AM – 2:00 PM, 5:00 PM – 10:30 PM
+                
+                Entry Fee: Free
+
+                </b></p><br>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3685.5098568508024!2d88.33862197507614!3d22.5225658295273!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a02774a41c0aeeb%3A0xd9189505f51dd4f!2sKalighat%20Mandir!5e0!3m2!1sen!2sin!4v1741702281961!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <a href="booking.html" class="btn">Book Now</a>
+            </div>
+
+        <div class="category">
+            <img src="../images/wb6.jpg" alt="Oil">
+            <h2>Nakoda mosque – Kolkata
+            </h2>
+            <p><b> 
+                Info: The largest mosque in Kolkata, built in 1926 with stunning Indo-Saracenic architecture.
+
+                Opening Hours: 4:00 AM – 10:00 PM
+                
+                Entry Fee: Free
+                
+                </b></p><br>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3684.044017039538!2d88.35368387507788!3d22.577456979488314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0277b1b0c0b993%3A0x2d436551231224e9!2sNakhoda%20Masjid%20(Mosque)!5e0!3m2!1sen!2sin!4v1741702486731!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <a href="booking.html" class="btn">Book Now</a>
+        </div>
+        </section>
+       <br>
+       <br>
+       
+       
+       <h2 id="monuments-section"><b><center>Monuments & Heritage sites</center></b></h2>
+       <section class="categories">
+       <div class="category" >
+        <img src="../images/wb7.jpg".jpg" alt="Millets">
+        <h2>VictoriaMemorial –Kolkata</h2>
+        <br>
+       
+        <p><b>
+
+            Info: A grand marble monument dedicated to Queen Victoria, featuring a museum and lush gardens.
+
+            Opening Hours: 10:00 AM – 5:00 PM (Closed on Mondays)
+            
+            Entry Fee: ₹30 (Indians), ₹500 (Foreigners)
+            
+            </b></p>
+            <br>
+           
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1842.45049484097!2d88.34097538860571!3d22.5453813948778!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a02771346ae015d%3A0xb540e4bce39763!2sVictoria%20Memorial!5e0!3m2!1sen!2sin!4v1741702613412!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>            <a href="booking.html" class="btn">Book Now</a>
+        </div>
+
+    <div class="category">
+        <img src="../images/wb8.jpg" alt="Oil">
+        <h2>Jorasanko Thakur Bari – Kolkata
+        </h2>
+        <p><b>
+            Info: The ancestral home of Rabindranath Tagore, now a museum showcasing his life and works.
+
+            Opening Hours: 10:30 AM – 5:00 PM (Closed on Mondays)
+            
+            Entry Fee: ₹20 (Indians), ₹150 (Foreigners)
+            
+            
+            </b></p>
+           <br>
+           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3683.845115555479!2d88.35665377507809!3d22.58489547948294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0277b5ca342c5d%3A0x422d938a2d0005ec!2sJorasanko%20Thakurbari!5e0!3m2!1sen!2sin!4v1741702745239!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+           <a href="booking.html" class="btn">Book Now</a>
+    </div>
+    <div class="category">
+        <img src="../images/wb9.png" alt="Oil">
+        <h2>Howrah BridgeTemple– Kolkata
+        </h2>
+        <p><b>
+ Info: for its engineering marvel, historical significance, and architectural brilliance
+Opening Hours: 6:00 AM – 6:00 PM
+
+Entry Fee: ₹10 (Indians), ₹250 (Foreigners)
+
+            
+            </b></p><br>
+            <br>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d939723.0527010219!2d86.65308486646144!3d23.068042988082702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0277bfbb1eeb1b%3A0xc9840aaa8c411199!2sHowrah%20Bridge!5e0!3m2!1sen!2sin!4v1741703009527!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <a href="booking.html" class="btn">Book Now</a>
+    </div>
+        </div>
+    </section>
+    <script>
+    function logoutUser() {
+        sessionStorage.removeItem("loggedIn"); // Remove login session
+        alert("You have been logged out.");
+        window.location.href = "login11.html"; // Redirect to login page
+    }
+    function showCategory(category) {
+            if (category === 'monuments') {
+                document.getElementById("monuments-section").scrollIntoView({ behavior: 'smooth' });
+            } else if (category === 'forts') {  // Changed from 'fort' to 'forts'
+                document.getElementById("fort-section").scrollIntoView({ behavior: 'smooth' });
+            } else if (category === 'religious') {  // Changed 'Religious' to lowercase for consistency
+                document.getElementById("religious-section").scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+      </script>
+</body>
+</html>

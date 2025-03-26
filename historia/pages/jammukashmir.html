@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="../css/style1.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="container">
+    <header>
+        <img src="../images/logo.jpg" alt="Historia" class="logo">
+<h1>Historia</h1>
+<nav>
+    <ul class="nav-bar">
+        <li><a href="../index.html"><b>Home</b></a></li>
+        <li><a href="about1.html"><b>About Us</b></a></li>
+        <li class="dropdown">
+            <a href="place.html"><b>Places&#9662;</b></a>
+          
+            <ul class="dropdown-menu">
+                <li><a href="maharashtra.html"><b>Maharashtra</b></a></li>
+                <li><a href="karnataka.html"><b>Karnataka</b></a></li>               
+                <li><a href="place.html"><b>See More</b></a></li>
+            </ul>
+    
+
+        </li>
+        
+        </li>
+        <li class="dropdown">
+            <a href="#"><i class="fa-solid fa-user"></i><b> Account&#9662;</b></a>
+            <ul class="dropdown-menu">
+                <li><a href="login11.html"><b>Login</b></a></li>
+                <li><a href="#" onclick="logoutUser()"><b>Logout</b></a></li>
+            </ul>
+        </li>
+                <li><a href="booking.html"><i class="fas fa-ticket-alt nav-icon"></i><b>Guide Booking</b></a></li>
+                <li><a href="contactus.html"><i class="fa-solid fa-phone"></i><b> Contact Us</b></a></li>
+                <li><a href="feedback.html"><b>Feedback</b></a></li>
+                
+</ul>
+</nav> 
+  
+    </header>
+        </div>
+    </div>
+<br>
+<h1><center>Jammu & Kashmir</center></h1>
+<br>
+<br>
+<button onclick="showCategory('forts')">Go to Historical Forts</button>
+<button onclick="showCategory('religious')">Go to Religious Places</button>
+<button onclick="showCategory('monuments')">Go to Monuments & Heritage sites</button>
+<br><br>
+<h2 id="fort-section"><b><center>Historical Forts</center></b></h2>
+<section class="categories"> 
+    <div class="category">
+        <img src="../images/jmu1.jpg"alt="Vegetable">
+        <h2>Hari Prabhat Fort – 
+          <br>Shrinagar</h2>
+        <p><b>
+            Info: A Mughal-era fort offering panoramic views of Srinagar and Dal Lake.
+Opening Hours: 8:00 AM – 5:00 PM
+Entry Fee: Free
+            </b></p><br>
+            
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3303.5836013864196!2d74.81392997571879!3d34.10580617313677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38e185726f612dbd%3A0x3ab1516f0503ffb6!2sHari%20Parbat!5e0!3m2!1sen!2sin!4v1741697647627!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <a href="booking.html" class="btn">Book Now</a>
+    </div>
+
+    <div class="category">
+        <img src="../images/jmu2.jpg"alt="Fruits">
+        <h2> Bhimgrah Fort– <br>Reasi</h2>
+        <p><b>
+            Info: A 19th-century fort built by Raja Rishipal Rana, overlooking the Chenab River.
+            Opening Hours: 9:00 AM – 6:00 PM
+            Entry Fee: ₹20 (Indians), ₹200 (Foreigners)
+            </b></p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3343.216739854305!2d74.83150637547307!3d33.07708207353967!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391e70fbc2ffffff%3A0x40d4e96542716b5c!2sBhimgarh%20Fort!5e0!3m2!1sen!2sin!4v1741697871794!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <a href="booking.html" class="btn">Book Now</a>
+    </div>
+
+        <div class="category">
+            <img src="../images/jmu3.jpg" alt="Rice">
+            <h2>Akhnoor Fort  – <br>Jammu</h2>
+            <p><b>
+                Info: A historic fort built on the banks of the Chenab River, associated with the Harappan civilization.
+                Opening Hours: 8:00 AM – 6:00 PM
+                Entry Fee: Free                
+</b></p>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3350.071837433672!2d74.73808817546507!3d32.896268873614055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391e62fe019a1f47%3A0x9a3a85db14bcc629!2sAkhnoor%20Fort!5e0!3m2!1sen!2sin!4v1741698030003!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<a href="booking.html" class="btn">Book Now</a>
+        </div>
+    </section>
+        <br>
+        <br>
+        <br>
+        <br>
+        
+                    
+<h2 id="religious-section"><b><center>Religious Places</center></b></h2>
+<section class="categories">
+        <div class="category">
+            <img src="../images/jmu4.jpg" alt="Oil">
+            <h2> Vaishno DeviTemple – Katra
+
+            </h2>
+            <p><b>
+                Info: One of the holiest Hindu shrines, dedicated to Goddess Vaishno Devi, nestled in the Trikuta Mountains.
+                Opening Hours: Open 24/7
+                Entry Fee: Free                
+
+                </b></p><br><br>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6689.949715150064!2d74.9395901110913!3d33.0307928599895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391e786b6985aaad%3A0xa04ab611af048191!2sVaishno%20Devi!5e0!3m2!1sen!2sin!4v1741698394907!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <a href="booking.html" class="btn">Book Now</a>   <br>
+        </div>
+    
+        <div class="category">
+            <img src="../images/jmu9.jpg" alt="Oil">
+            <h2>Amarnath Cave Temple – Anatnag
+            </h2>
+            <p><b>
+                Info: A sacred Hindu shrine dedicated to Lord Shiva, featuring a naturally forming ice lingam.
+Opening Hours: Open during the Amarnath Yatra (June – August)
+Entry Fee: Free (Registration required)
+                
+
+                </b></p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13513879.192037733!2d55.99240135000002!3d34.2156918!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38e24fca96056755%3A0xdfd15d625912515e!2sShri%20Amarnath%20Cave%20Temple!5e0!3m2!1sen!2sin!4v1741698681694!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <a href="booking.html" class="btn">Book Now</a>
+            </div>
+
+        <div class="category">
+            <img src="../images/jmu5.jpg" alt="Oil">
+            <h2>Hazratbal Shrine – Shrinagar
+            </h2>
+            <p><b> 
+                Info: A revered Muslim shrine housing a relic believed to be a hair strand of Prophet Muhammad.
+Opening Hours: 5:30 AM – 10:00 PM
+Entry Fee: Free
+                </b></p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105662.63449633081!2d74.74754177060103!3d34.14743382364071!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38e185bc7a3fbbd9%3A0x9b6cf66822475e36!2sDargah%20Hazratbal%20Shrine!5e0!3m2!1sen!2sin!4v1741698941467!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <a href="booking.html" class="btn">Book Now</a>
+        </div>
+        </section>
+       <br>
+       <br>
+       
+       <h2 id="monuments-section"><b><center>Monuments & Heritage sites</center></b></h2>
+       <section class="categories">
+
+       <div class="category" >
+        <img src="../images/jmu6.JPG".jpg" alt="Millets">
+        <h2>Mubarak Mandi Palace –Jammu</h2>
+        <br>
+       
+        <p><b>
+
+            Info: A grand palace with a mix of Mughal, Rajasthani, and Gothic architecture.
+Opening Hours: 10:00 AM – 5:00 PM
+Entry Fee: Free
+        
+            </b></p>
+            <br>
+           
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3355.9944595637844!2d74.86963838211402!3d32.73933780581353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391e83807aec1d9d%3A0x752d692517fa6e3f!2sMubarak%20Mandi%20Palace!5e0!3m2!1sen!2sin!4v1741699135174!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <a href="booking.html" class="btn">Book Now</a>
+        </div>
+
+    <div class="category">
+        <img src="../images/jmu8.jpg" alt="Oil">
+        <h2>Amar Mahal Palace – Jammu
+        </h2>
+        <p><b>
+            Info: A French-style palace turned museum, once home to the Dogra dynasty rulers.
+            Opening Hours: 10:00 AM – 5:00 PM
+            Entry Fee: ₹20 (Indians), ₹100 (Foreigners)
+            </b></p>
+           <br>
+           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3355.6791345056217!2d74.86971777545867!3d32.74770977367585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391e84778bb4030f%3A0xb2ebe51a9e1da4bc!2sAmar%20Mahal%20Museum%20and%20Library!5e0!3m2!1sen!2sin!4v1741699591896!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+           <a href="booking.html" class="btn">Book Now</a>
+    </div>
+    <div class="category">
+        <img src="../images/jmu7.jpg" alt="Oil">
+        <h2>Shankracharya Temple– Shrinagar
+        </h2>
+        <p><b>
+            An ancient Hindu temple dedicated to Lord Shiva, offering breathtaking views of Srinagar.
+            Opening Hours: 7:00 AM – 8:00 PM
+            Entry Fee: Free            
+            
+            
+            </b></p>
+            <br>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3304.6329713583536!2d74.8411491755178!3d34.07892177314704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38e18f6f3f8716df%3A0x778e120d6489acda!2sShri%20Adi%20Shankaracharya%20Temple%2C%20Srinagar!5e0!3m2!1sen!2sin!4v1741699332666!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <a href="booking.html" class="btn">Book Now</a>
+    </div>
+        </div>
+    </section>
+    <script>
+    function logoutUser() {
+        sessionStorage.removeItem("loggedIn"); // Remove login session
+        alert("You have been logged out.");
+        window.location.href = "login11.html"; // Redirect to login page
+    }
+    function showCategory(category) {
+            if (category === 'monuments') {
+                document.getElementById("monuments-section").scrollIntoView({ behavior: 'smooth' });
+            } else if (category === 'forts') {  // Changed from 'fort' to 'forts'
+                document.getElementById("fort-section").scrollIntoView({ behavior: 'smooth' });
+            } else if (category === 'religious') {  // Changed 'Religious' to lowercase for consistency
+                document.getElementById("religious-section").scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+      </script>
+</body>
+</html>

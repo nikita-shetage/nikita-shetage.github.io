@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="../css/style1.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="container">
+    <header>
+        <img src="../images/logo.jpg" alt="Evergreen Organic Shop" class="logo">
+<h1>Historia</h1>
+<nav>
+    <ul class="nav-bar">
+        <li><a href="../index.html"><i class="fas fa-home nav-icon"></i><b>Home</b></a></li>
+        <li><a href="about1.html"><i class="fas fa-info-circle nav-icon"></i></i><b>About Us</b></a></li>
+        <li class="dropdown">
+            <a href="place.html"></i><b>Places&#9662;</b></a>
+          
+            <ul class="dropdown-menu">
+                <li><a href="maharashtra.html"><b>Maharashtra</b></a></li>
+                <li><a href="karnataka.html"><b>Karnataka</b></a></li>               
+                <li><a href="place.html"><b>See More</b></a></li>
+            </ul>
+    
+
+        </li>
+        
+        </li>
+        <li class="dropdown">
+            <a href="#"><i class="fa-solid fa-user"></i><b> Account&#9662;</b></a>
+            <ul class="dropdown-menu">
+                <li><a href="login11.html"><b>Login</b></a></li>
+                <li><a href="#" onclick="logoutUser()"><b>Logout</b></a></li>
+            </ul>
+        </li>
+                <li><a href="booking.html"><i class="fas fa-ticket-alt nav-icon"></i><b>Guide Booking</b></a></li>
+                <li><a href="contactus.html"><i class="fa-solid fa-phone"></i><b> Contact Us</b></a></li>
+                <li><a href="feedback.html"><b>Feedback</b></a></li>
+                
+</ul>
+</nav> 
+  
+    </header>
+        </div>
+    </div>
+<br>
+<h1><center>Rajasthan</center></h1>
+<br>
+<br>
+<button onclick="showCategory('forts')">Go to Historical Forts</button>
+<button onclick="showCategory('religious')">Go to Religious Places</button>
+<button onclick="showCategory('monuments')">Go to Monuments & Heritage sites</button>
+<br><br>
+<h2 id="fort-section"><b><center>Historical Forts</center></b></h2>
+<section class="categories">  
+    <div class="category">
+        <img src="../images/raj1.jpg"alt="Vegetable">
+        <h2>Amber Fort – 
+          <br> Jaipur</h2>
+        <p><b>
+            Info: A UNESCO World Heritage Site, this stunning fort features Rajput and Mughal architecture.
+            Opening Hours: 8:00 AM – 5:30 PM
+            
+            Entry Fee:  ₹100 (Indians), ₹550 (Foreigners)
+
+
+        </b></p>
+            
+    <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d7110.581619108889!2d75.84952194307573!3d26.989349056406127!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1samber%20fort%20location!5e0!3m2!1sen!2sin!4v1741604889338!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <a href="booking.html" class="btn">Book Now</a>
+    </div>
+    <div class="category">
+        <img src="../images/raj2.jpg"alt="Fruits">
+        <h2>Jaisalmer Fort – <br>Jaisalmer</h2>
+        <p><b>
+            Info: A living fort where people still reside, featuring golden sandstone architecture, temples, and vibrant markets.
+
+        Opening Hours: Open 24/7
+
+        Entry Fee: Free</b></p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3557.7176215405916!2d70.91003437522433!3d26.91245547664739!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3947bd22886171ed%3A0xd4a507c4923e1973!2sJaisalmer%20Fort!5e0!3m2!1sen!2sin!4v1741606086300!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>        <a href="booking.html" class="btn">Book Now</a>
+    </div>
+        <div class="category">
+            <img src="../images/raj3.jpg" alt="Rice">
+            <h2>Chattorgarh Fort – <br>Chattorgarh</h2>
+            <p><b>
+             Info: The largest fort in India, famous for its historical battles, legendary tale of Rani Padmini.
+
+                
+                Opening Hours: 9:00 AM – 5:00 PM
+                
+                Entry Fee: ₹50 (Indians), ₹600 (Foreigners)
+
+
+                
+                </b></p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115801.5891744721!2d74.53919243297176!3d24.90481431764317!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3968a0424d11a8d9%3A0x79f097c869345f8d!2sChittorgarh%2C%20Rajasthan!5e0!3m2!1sen!2sin!4v1741606460364!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>            <a href="booking.html" class="btn">Book Now</a>
+        </div>
+    </section>
+        <br>
+        <br>
+        <br>
+        <br>
+        
+                    
+<h2 id="religious-section"><b><center>Religious Places</center></b></h2>
+<section class="categories">
+        <div class="category">
+            <img src="../images/raj7.jpg" alt="Oil">
+            <h2> Brahma Temple  – Pushkar
+            </h2>
+            <p><b>
+                Info: One of the very few temples dedicated to Lord Brahma, situated near the sacred Pushkar Lake                
+                Opening Hours: 5:30 AM – 9:00 PM
+                
+                Entry Fee: Free
+                </b></p>
+                <br>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1785.5080651616686!2d74.54765633860089!3d26.487425494225818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396bdd202ebaf0d9%3A0x8526563922af8710!2sJagatpita%20Shri%20Brahma%20Mandir!5e0!3m2!1sen!2sin!4v1741606870429!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>            <a href="booking.html" class="btn">Book Now</a>
+        </div>
+    
+        <div class="category">
+            <img src="../images/raj8.jpg" alt="Oil">
+            <h2>Karni Mata Temple – Bikaner</h2>
+            <p><b>
+Info:A beautifully carved temple dedicated to Tirthankara Adinatha, featuring 1,444 unique marble pillars.
+                
+                Opening Hours: 7:00 AM – 5:00 PM
+                
+                Entry Fee: ₹50 (Indians), ₹200 (Foreigners)
+
+                </b></p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3529.609741822011!2d73.33824567525694!3d27.79099657613477!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x393ffb097861b639%3A0x33d6f39cad95e6ac!2sKarni%20Mata%20Temple!5e0!3m2!1sen!2sin!4v1741607095587!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>            <a href="booking.html" class="btn">Book Now</a>
+        </div>
+        <div class="category">
+            <img src="../images/raj4.jpg" alt="Oil">
+            <h2>Dilwara Temple  – Mount Abu</h2>
+            <p><b> 
+                Info: A group of exquisite Jain temples, famous for their intricate marble carvings 
+                
+                Opening Hours: 12:00 AM – 5:00 PM
+                
+                Entry Fee: Free
+                </b></p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3627.414872851339!2d72.7204047751435!3d24.609381978094007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395d2a8fee50b0fd%3A0x457abeef5061268!2sDelwada%20Temple!5e0!3m2!1sen!2sin!4v1741607397582!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>            <a href="booking.html" class="btn">Book Now</a>
+        </div>
+        </section>
+       <br>
+       <br>
+       
+       
+       <h2 id="monuments-section"><b><center>Monuments & Heritage sites</center></b></h2>
+<section class="categories">
+
+       <div class="category" >
+        <img src="../images/raj5.jpg" alt="Millets">
+        <h2>Hawa Mahal – Jaipur</h2>
+        <br>
+       
+        <p><b>
+
+            Info: "Palace of Winds," built for royal women to observe city life from behind intricate jharokhas (windows).
+
+            
+            Opening Hours: 9:00 AM – 4:30 PM
+Entry Fee: ₹50 (Indians), ₹200 (Foreigners)
+            
+            
+            </b></p>
+            <br>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3557.352234071304!2d75.82413947522475!3d26.924045776640334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db14b1bd30ba5%3A0x860e5d531eccb20c!2sHawa%20Mahal!5e0!3m2!1sen!2sin!4v1741607639420!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>        <a href="booking.html" class="btn">Book Now</a>
+    </div>
+
+    <div class="category">
+        <img src="../images/raj6.jpg" alt="Oil">
+        <h2>City Palace – Udaipur</h2>
+        <p><b>
+
+          Info: A stunning palace complex overlooking Lake Pichola, showcasing Mewar royal heritage and a museum with artifacts.
+
+          Opening Hours: 9:30 AM – 5:30 PM
+Entry Fee: ₹300 (Indians), ₹800 (Foreigners)
+            
+            </b></p><br><br>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3628.3694735845734!2d73.68093597514245!3d24.576442078115758!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3967e5640659a7d5%3A0x9257af76faeaab0e!2sCity%20Palace!5e0!3m2!1sen!2sin!4v1741607893238!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <a href="booking.html" class="btn">Book Now</a>
+    </div>
+    <div class="category">
+        <img src="../images/raj9.jpg" alt="Oil">
+        <h2>Umaid Bhawan Palace – Jodhpur</h2>
+        <p><b>
+
+            Info: A part-hotel, part-museum, and residence of the Jodhpur royal family, showcasing royal collections and history.
+            
+            Opening Hours: 10:00 AM – 4:30 PM (Closed on Mondays)
+            
+            Entry Fee: ₹1000 (Indians), ₹400 (Foreigners)
+            
+            
+            </b></p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3577.4078486621274!2d73.04496372520154!3d26.28087527702932!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sumhid%20bhavan%20palace%20location!5e0!3m2!1sen!2sin!4v1741608093786!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>        <a href="booking.html" class="btn">Book Now</a>
+    </div>
+        </div>
+    </section>
+    <script>
+    function logoutUser() {
+        sessionStorage.removeItem("loggedIn"); // Remove login session
+        alert("You have been logged out.");
+        window.location.href = "login11.html"; // Redirect to login page
+    }
+    function showCategory(category) {
+            if (category === 'monuments') {
+                document.getElementById("monuments-section").scrollIntoView({ behavior: 'smooth' });
+            } else if (category === 'forts') {  // Changed from 'fort' to 'forts'
+                document.getElementById("fort-section").scrollIntoView({ behavior: 'smooth' });
+            } else if (category === 'religious') {  // Changed 'Religious' to lowercase for consistency
+                document.getElementById("religious-section").scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+      </script>
+</body>
+</html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>About Us - Historia</title> 
+  <style>
+    body {
+     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-image: url('ab1.jpg'); /* Change to your image file */
+    background-size: cover; /* Cover entire screen */
+    background-position: center; /* Center the image */
+    background-attachment: fixed; /* Fixed background */
+
+      }
+.logo{
+    height: 90px;
+    width:90px;
+    border-radius:100px;
+}
+header {
+    background:  #5e2c04;
+    border-bottom: 2px solid #d1b392;
+    color: white;
+    font-size: 150%;
+    padding: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* Basic Navigation Bar Styling */
+nav {
+    background:  #5e2c04;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-bar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+.nav-bar li {
+    position: relative;
+}
+
+.nav-bar li a {
+    text-decoration: none;
+    padding: 10px 20px;
+    color: white;
+    display: block;
+    font-size: 18px;
+}
+
+.nav-bar li a:hover {
+    background-color: #a67b5b;
+}
+/* Dropdown Menu Styling */
+.dropdown-menu {
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color:  #79443b;
+    display: none;
+    min-width: 150px;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-menu li {
+    border-bottom: 1px solid cornsilk;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 10px;
+    color: white;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #9f8170;
+}
+
+/* Show Dropdown on Hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+ .container {
+            width: 80%;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 10px;
+            background:#fff8dc;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            max-height: 550px;
+        }
+
+        h2 {
+            color: white;
+            font-size: 30px;
+            margin-trim: 5px;
+        }
+
+        .intro {
+            font-size: 18px;
+            line-height: 1.2;
+            margin-bottom: 5px;
+        }
+
+        
+
+        .section {
+            text-align: left;
+            margin: 20px 0;
+            padding: 15px;
+            background: #eef;
+            border-radius: 8px;
+        }
+
+        h2 {
+            color: black;
+            padding-bottom: 1px;
+            display: inline-block;
+        }
+
+        .stats-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .stat-box {
+            background: white;
+            border-radius: 10px;
+            padding: 14px;
+            margin: 10px;
+            width: 220px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .stat-box h3 {
+            font-size: 18px;
+            margin-bottom: 5px;
+            color: black;
+        }
+
+        .stat-box p {
+            font-size: 14px;
+            color: #555;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            backdrop-filter: blur(5px);
+            color: white;
+            z-index: 2;
+        }
+        
+        
+    </style> 
+ </head> 
+ <body> 
+    <header>
+        <img src="../images/logo.jpg" alt="HISTORIA" class="logo">
+        <h1>HISTORIA</h1>
+<nav>
+    <ul class="nav-bar">
+        <li><a href="../index.html"><i class="fas fa-home nav-icon"></i><b>Home</b></a></li>
+        <li><a href="about1.html"><i class="fas fa-info-circle nav-icon"></i><b>About Us</b></a></li>
+        <li class="dropdown">
+            <a href="place.html"><i class="fas fa-map-marked-alt nav-icon"></i><b>Places&#9662;</b></a>
+          
+            <ul class="dropdown-menu">
+                <li><a href="maharashtra.html"><b>Maharashtra</b></a></li>
+                <li><a href="karnataka.html"><b>Karnataka</b></a></li>               
+                <li><a href="place.html"><b>See More</b></a></li>
+            </ul>
+        
+        </li>
+        <li class="dropdown">
+            <a href="login11.html"><i class="fa-solid fa-user"></i><b> Account&#9662;</b></a>
+            <ul class="dropdown-menu">
+                <li><a href="login11.html"><b>Login</b></a></li>
+                <li><a href="#" onclick="logoutUser()"><b>Logout</b></a></li>
+            </ul>
+        </li>
+                <li><a href="booking.html"><i class="fas fa-ticket-alt nav-icon"></i><b>Guide Booking</b></a></li>
+                <li><a href="contactus.html"><i class="fa-solid fa-phone"></i><b> Contact Us</b></a></li>
+                <li><a href="feedback.html"><i class="fas fa-comments nav-icon"></i><b>Feedback</b></a></li>
+                
+</ul>
+</nav> 
+  
+    </header>
+  <div class="container"> 
+   <h2>About Historia</h2> 
+   <p><b>Historia is a digital platform dedicated to showcasing India's rich heritage and historical landmarks. Our goal is to provide an immersive experience for history enthusiasts, travelers, and culture lovers through detailed information, interactive maps, and curated content.</b></p> 
+    
+    <h2>Our Mission</h2> 
+    <p><b> At Historia, we aim to preserve and promote historical knowledge by making it easily accessible to everyone. We believe that understanding the past helps us appreciate the present and shape the future. </b></p> 
+ 
+    <h2>Our Vision</h2> 
+    <p><b> We envision a world where history is not just a subject but an experience. Through technology, we bring the past to life, ensuring that every story, monument, and cultural treasure is celebrated and remembered. </b></p>   
+  </div> 
+   <!-- Footer -->
+   <footer>
+    <p>&copy; 2025 Historia. All rights reserved.</p>
+</footer>
+  <script>
+    function logoutUser() {
+    sessionStorage.clear("loggedIn"); // clear all session data
+    alert("You have been logged out.");
+    window.location.href = "login11.html"; // Redirect to login page
+}
+  </script>
+  
+ </body>
+</html>

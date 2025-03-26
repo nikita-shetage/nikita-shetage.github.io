@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en"> 
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- ✅ Font Awesome for Icons --> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">  
+  <title>Contact Us - Historia</title> 
+  <style>
+        body {
+     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-image: url('con1.jpg'); /* Change to your image file */
+    background-size: cover; /* Cover entire screen */
+    background-position: center; /* Center the image */
+    background-attachment: fixed; /* Fixed background */
+
+      }
+.logo{
+    height: 90px;
+    width:90px;
+    border-radius:100px;
+}
+header {
+    background:  #5e2c04;
+    border-bottom: 2px solid #d1b392;
+    color: white;
+    font-size: 150%;
+    padding: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* Basic Navigation Bar Styling */
+nav {
+    background:  #5e2c04;
+    padding: 10px 0;
+}
+
+.nav-bar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+.nav-bar li {
+    position: relative;
+}
+
+.nav-bar li a {
+    text-decoration: none;
+    padding: 10px 20px;
+    color: white;
+    display: block;
+    font-size: 18px;
+}
+
+.nav-bar li a:hover {
+    background-color: #a67b5b;
+}
+/* Dropdown Menu Styling */
+.dropdown-menu {
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color:  #79443b;
+    display: none;
+    min-width: 150px;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-menu li {
+    border-bottom: 1px solid cornsilk;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 10px;
+    color: white;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #9f8170;
+}
+
+/* Show Dropdown on Hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+
+.container {
+        margin: 50px auto;
+        max-width: 400px;
+        background: cornsilk;
+        padding: 20px;
+        border-radius: 8px;
+        text-align: center;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        overflow-y: auto;
+        max-height: 85vh;
+        margin-top: 60px;
+      }
+
+        h2, h3 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .contact-info {
+            background: #eef;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+            text-align: left;
+        }
+
+        .contact-info p {
+            margin: 5px 0;
+        }
+
+        iframe {
+            width: 100%;
+            height: 200px;
+            border: 0;
+            border-radius: 5px;
+        }
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            backdrop-filter: blur(5px);
+            color: white;
+            z-index: 2;
+        }
+    </style> 
+ </head> 
+ <body> 
+    <header>
+        <img src="../images/logo.jpg" alt="HISTORIA" class="logo">
+        <h1>HISTORIA</h1>
+<nav>
+    <ul class="nav-bar">
+        <li><a href="../index.html"><i class="fas fa-home nav-icon"></i><b>Home</b></a></li>
+        <li><a href="about1.html"><i class="fas fa-info-circle nav-icon"></i><b>About Us</b></a></li>
+        <li class="dropdown">
+            <a href="place.html"><i class="fas fa-map-marked-alt nav-icon"></i><b>Places&#9662;</b></a>
+          
+            <ul class="dropdown-menu">
+                <li><a href="maharashtra.html"><b>Maharashtra</b></a></li>
+                <li><a href="karnataka.html"><b>Karnataka</b></a></li>               
+                <li><a href="place.html"><b>See More</b></a></li>
+            </ul>
+    
+
+        </li>
+        
+        </li>
+    </li>
+    <li class="dropdown">
+        <a href="login11.html"><i class="fa-solid fa-user"></i><b> Account&#9662;</b></a>
+        <ul class="dropdown-menu">
+            <li><a href="login11.html"><b>Login</b></a></li>
+            <li><a href="#" onclick="logoutUser()"><b>Logout</b></a></li>
+        </ul>
+    </li>
+                <li><a href="booking.html"><i class="fas fa-ticket-alt nav-icon"></i><b>Guide Booking</b></a></li>
+                <li><a href="contactus.html"><i class="fa-solid fa-phone"></i><b> Contact Us</b></a></li>
+                <li><a href="feedback.html"><i class="fas fa-comments nav-icon"></i><b>Feedback</b></a></li>
+                
+</ul>
+</nav> 
+  
+    </header>
+  <div class="container"> 
+   <div class="contact-info"> 
+    <h1>Our Contact Information</h1> 
+    <p><strong>Address:</strong> 123 Heritage Street, Mumbai, India</p> 
+    <p><strong>Email:</strong> <a href="mailto:contact@historia.com">contact@historia.com</a></p> 
+    <p><strong>Phone:</strong> <a href="tel:+919876543210">+91 9876543210</a></p> 
+   </div> 
+   <div class="map-container"> 
+    <h3>Find Us on Google Maps</h3> <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.662029161108!2d72.83106257491649!3d19.12134298210674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b61cfa6b90cf%3A0x7c3e2b9e9c0e2e7d!2s123%20Heritage%20St%2C%20Mumbai%2C%20Maharashtra%20400050%2C%20India!5e0!3m2!1sen!2sin!4v1707887564358!5m2!1sen!2sin" allowfullscreen loading="lazy"> </iframe> 
+   </div> 
+  </div> 
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Historia. All rights reserved.</p>
+</footer>
+
+  <script>
+    function logoutUser() {
+    sessionStorage.removeItem("loggedIn"); // Remove login session
+    alert("You have been logged out.");
+    window.location.href = "login11.html"; // Redirect to login page
+}
+  </script>
+ </body>
+</html>

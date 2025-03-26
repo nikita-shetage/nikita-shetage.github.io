@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="../css/place.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="container">
+    <header>
+        <img src="../images/logo.jpg" alt="HISTORIA" class="logo">
+<h1>HISTORIA</h1>
+<nav>
+    <ul class="nav-bar">
+        <li><a href="../index.html"><i class="fas fa-home nav-icon"></i><b>Home</b></a></li>
+        <li><a href="about1.html"><i class="fas fa-info-circle nav-icon"></i><b>About Us</b></a></li>
+        <li class="dropdown">
+            <a href="place.html"><i class="fas fa-map-marked-alt nav-icon"></i><b>Places&#9662;</b></a>
+          
+            <ul class="dropdown-menu">
+                <li><a href="maharashtra.html"><b>Maharashtra</b></a></li>
+                <li><a href="karnataka.html"><b>Karnataka</b></a></li>               
+                <li><a href="place.html"><b>See More</b></a></li>
+            </ul>
+    
+
+        </li>
+        
+        </li>
+        <li class="dropdown">
+            <a href="login11.html"><i class="fa-solid fa-user"></i><b> Account&#9662;</b></a>
+            <ul class="dropdown-menu">
+                <li><a href="login11.html"><b>Login</b></a></li>
+                <li><a href="#" onclick="logoutUser()"><b>Logout</b></a></li>
+            </ul>
+        </li>
+                <li><a href="booking.html"><i class="fas fa-ticket-alt nav-icon"></i><b>Guide Booking</b></a></li>
+                <li><a href="contactus.html"><i class="fa-solid fa-phone"></i><b> Contact Us</b></a></li>
+                <li><a href="feedback.html"><i class="fas fa-comments nav-icon"></i><b>Feedback</b></a></li>
+                
+</ul>
+</nav> 
+  
+    </header>
+        </div>
+    </div>
+       <h1><center>Indian states</center></h1>
+       <section class="categories">  
+       <div class="category">
+           <img src="../images/maharashtra.jpg"alt="Vegetable">
+           <h2>Maharashtra</h2>
+           <h3><b>"Land of Warriors, Land of Forts – Discover the Glory of the Marathas!"</b></h3>
+           <br>
+           <a href="maharashtra.html" class="btn">Explore</a>
+       </div>
+       <div class="category">
+           <img src="../images/karnataka.jpg"alt="Fruits">
+           <h2>Karnataka</h2>
+           <h3>"Echoes of the Vijayanagara Empire – Where History Meets Heritage!"</h3>
+           <br>
+           <a href="karnataka.html" class="btn">Explore</a>
+       </div>
+           <div class="category">
+               <img src="../images/himachal.jpg" alt="Rice">
+               <h2>Himachal Pradesh</h2>
+               <h3>"Mystical Temples, Majestic Peaks – Where Spirituality Touches the Sky!"</h3>
+               <a href="himachalpradesh.html" class="btn">Explore </a>
+           </div>
+           <div class="category" >
+               <img src="../images/kerala.jpg" alt="Millets">
+               <h2>Kerala</h2>
+               <h3>"God’s Own Country – Where History and Nature Breathe Together!"</h3>
+               <br>
+               <a href="kerala.html" class="btn">Explore</a>
+           </div>
+           </div>
+           <div class="category">
+               <img src="../images/west.jpg" alt="Oil">
+               <h2>West Bengal</h2>
+               <h3>"From the Land of Tagore to the Grandeur of the Raj – Feel the Legacy!"</h3>
+               <br>
+               <a href="westbegal.html" class="btn">Explore</a>
+           </div>
+   
+           <div class="category">
+               <img src="../images/jammu.jpg" alt="Dry Fruit">
+               <h2>Jammu & Kashmir</h2>
+               <h3>"Crown of India – Where History and Beauty Unite in Paradise!"</h3>
+               <a href="jammukashmir.html" class="btn">Explore</a>
+           </div>
+           <div class="category">
+               <img src="../images/rajsthan.jpg" alt="snacks">
+               <h2>Rajasthan</h2>
+               <h3>"Land of Kings, Forts, and Timeless Tales – Step into the Royal Past!"</h3>
+               <br>
+               <a href="rajstan.html" class="btn">Explore</a>
+           </div>
+           <div class="category">
+               <img src="../images/gujarat.jpg" alt="snacks">
+               <h2>Gujarat</h2>
+               <h3>"From the Temples of Somnath to the Forts of Junagadh – The Land of Legends!"</h3>
+               <br>
+               <a href="gujrat.html" class="btn">Explore</a>
+           </div>
+           
+           <div class="category">
+               <img src="../images/uttar.jpg" alt="snacks">
+               <h2>Uttar pradesh</h2>
+               <h3>"Heart of India’s Heritage – From the Taj to the Sacred Ganges!"</h3>
+               <br>
+               <a href="uttarpadesh.html" class="btn">Explore</a>
+               </div>
+               <div class="category">
+   
+                   <img src="../images/tamilnadu.jpg" alt="snacks">
+                   <h2>Tamilnadu</h2>
+                   <h3>"Where Temples Speak and Forts Stand Tall – Experience the Glory of the South!"</h3>
+                   <a href="tamilnadu.html" class="btn">Explore</a>
+               </div>
+           </div>
+       </section>
+       <script>
+        function logoutUser() {
+        sessionStorage.removeItem("loggedIn"); // Remove login session
+        alert("You have been logged out.");
+        window.location.href = "login11.html"; // Redirect to login page
+    }
+      </script>
+   </body>
+   </html>

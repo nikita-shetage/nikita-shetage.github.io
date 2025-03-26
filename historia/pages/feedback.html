@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en"> 
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Feedback - Historia</title> 
+  <link rel="stylesheet" href="../css/style2.css"> 
+  <!-- ✅ Font Awesome for Icons -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">  
+  <script src="../script.js" defer></script> 
+ </head> 
+ <body>
+   <body>
+      <div class="navbar">
+          <div class="container">
+      <header>
+          <img src="../images/logo.jpg" alt="Evergreen Organic Shop" class="logo">
+  <h1>HISTORIA</h1>
+  <nav>
+      <ul class="nav-bar">
+          <li><a href="../index.html"><i class="fas fa-home nav-icon"></i><b>Home</b></a></li>
+          <li><a href="about1.html"><i class="fas fa-info-circle nav-icon"></i><b>About Us</b></a></li>
+          <li class="dropdown">
+              <a href="place.html"><i class="fas fa-map-marked-alt nav-icon"></i><b>Places&#9662;</b></a>
+            
+              <ul class="dropdown-menu">
+                  <li><a href="maharashtra.html"><b>Maharashtra</b></a></li>
+                  <li><a href="karnataka.html"><b>Karnataka</b></a></li>               
+                  <li><a href="place.html"><b>See More</b></a></li>
+              </ul>
+      
+  
+          </li>
+          
+          </li>
+          <li class="dropdown">
+            <a href="login11.html"><i class="fa-solid fa-user"></i><b> Account&#9662;</b></a>
+            <ul class="dropdown-menu">
+                <li><a href="login11.html"><b>Login</b></a></li>
+                <li><a href="#" onclick="logoutUser()"><b>Logout</b></a></li>
+            </ul>
+        </li>
+                  <li><a href="booking.html"><i class="fas fa-ticket-alt nav-icon"></i><b>Guide Booking</b></a></li>
+                  <li><a href="contactus.html"><i class="fa-solid fa-phone"></i><b> Contact Us</b></a></li>
+                  <li><a href="feedback.html"><i class="fas fa-comments nav-icon"></i><b>Feedback</b></a></li>
+                  
+  </ul>
+  </nav> 
+    
+      </header>
+          </div>
+      </div>
+   
+    <div class="feedback-container"> 
+   <h2>Share Your Feedback</h2> 
+   <p>Your opinion matters! Help us improve.</p> 
+   <form id="feedbackForm"> <label for="name">Name</label> 
+    <input type="text" id="name" placeholder="Enter your name" required> <label for="email">Email</label> 
+    <input type="email" id="email" placeholder="Enter your email" required> <label for="rating">Rate Us</label> 
+    <div class="rating"> <span class="star" data-value="1">★</span> <span class="star" data-value="2">★</span> <span class="star" data-value="3">★</span> <span class="star" data-value="4">★</span> <span class="star" data-value="5">★</span> 
+    </div> <label for="message">Feedback</label> <textarea id="message" rows="4" placeholder="Write your feedback..." required></textarea> <button type="submit">Submit</button> 
+   </form> 
+  </div> 
+ </body>
+</html>
