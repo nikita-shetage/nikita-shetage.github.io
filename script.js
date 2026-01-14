@@ -1,3 +1,6 @@
+// Constants
+const PROGRESS_UPDATE_INTERVAL = 0.1; // seconds
+
 // Sample track data
 const tracks = [
     {
@@ -142,12 +145,14 @@ function play() {
     isPlaying = true;
     playPauseBtn.innerHTML = '<i class="fas fa-pause"></i>';
     startProgressAnimation();
+    updateCardPlayButtons();
 }
 
 function pause() {
     isPlaying = false;
     playPauseBtn.innerHTML = '<i class="fas fa-play"></i>';
     stopProgressAnimation();
+    updateCardPlayButtons();
 }
 
 // Previous/Next
@@ -214,7 +219,7 @@ function toggleLike() {
 function startProgressAnimation() {
     function animate() {
         if (isPlaying) {
-            currentTime += 0.1;
+            currentTime += PROGRESS_UPDATE_INTERVAL;
             if (currentTime >= duration) {
                 handleTrackEnd();
             } else {
@@ -306,36 +311,50 @@ function toggleMute() {
 
 // Add drag functionality for progress bar
 let isDraggingProgress = false;
-progressBar.addEventListener('mousedown', (e) => {
-    isDraggingProgress = true;
-    seekProgress(e);
-});
 
-document.addEventListener('mousemove', (e) => {
+function onProgressMouseMove(e) {
     if (isDraggingProgress) {
         seekProgress(e);
     }
-});
+}
 
-document.addEventListener('mouseup', () => {
-    isDraggingProgress = false;
+function onProgressMouseUp() {
+    if (isDraggingProgress) {
+        isDraggingProgress = false;
+        document.removeEventListener('mousemove', onProgressMouseMove);
+        document.removeEventListener('mouseup', onProgressMouseUp);
+    }
+}
+
+progressBar.addEventListener('mousedown', (e) => {
+    isDraggingProgress = true;
+    seekProgress(e);
+    document.addEventListener('mousemove', onProgressMouseMove);
+    document.addEventListener('mouseup', onProgressMouseUp);
 });
 
 // Add drag functionality for volume bar
 let isDraggingVolume = false;
-volumeBar.addEventListener('mousedown', (e) => {
-    isDraggingVolume = true;
-    seekVolume(e);
-});
 
-document.addEventListener('mousemove', (e) => {
+function onVolumeMouseMove(e) {
     if (isDraggingVolume) {
         seekVolume(e);
     }
-});
+}
 
-document.addEventListener('mouseup', () => {
-    isDraggingVolume = false;
+function onVolumeMouseUp() {
+    if (isDraggingVolume) {
+        isDraggingVolume = false;
+        document.removeEventListener('mousemove', onVolumeMouseMove);
+        document.removeEventListener('mouseup', onVolumeMouseUp);
+    }
+}
+
+volumeBar.addEventListener('mousedown', (e) => {
+    isDraggingVolume = true;
+    seekVolume(e);
+    document.addEventListener('mousemove', onVolumeMouseMove);
+    document.addEventListener('mouseup', onVolumeMouseUp);
 });
 
 // Keyboard shortcuts
@@ -374,20 +393,6 @@ function updateCardPlayButtons() {
         }
     });
 }
-
-// Update play button states when playing/pausing
-const originalPlay = play;
-const originalPause = pause;
-
-play = function() {
-    originalPlay();
-    updateCardPlayButtons();
-};
-
-pause = function() {
-    originalPause();
-    updateCardPlayButtons();
-};
 
 // Initialize the player when DOM is loaded
 document.addEventListener('DOMContentLoaded', init);
