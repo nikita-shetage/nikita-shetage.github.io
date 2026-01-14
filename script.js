@@ -775,8 +775,9 @@ function pause() {
 }
 
 // Sync progress with actual audio playback
+let audioSynced = false;
 function syncWithAudioElement() {
-    if (!audioPlayer.src) return;
+    if (!audioPlayer.src || audioSynced) return;
     
     audioPlayer.addEventListener('timeupdate', () => {
         if (isPlaying) {
@@ -788,6 +789,7 @@ function syncWithAudioElement() {
     
     audioPlayer.addEventListener('ended', handleTrackEnd);
     audioPlayer.volume = volume;
+    audioSynced = true;
 }
 
 // Show message helper

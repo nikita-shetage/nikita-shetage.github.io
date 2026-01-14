@@ -39,9 +39,14 @@ router.post('/register', [
         await user.save();
 
         // Generate token
+        const jwtSecret = process.env.JWT_SECRET;
+        if (!jwtSecret) {
+            return res.status(500).json({ error: 'Server configuration error' });
+        }
+        
         const token = jwt.sign(
             { userId: user._id },
-            process.env.JWT_SECRET || 'your-secret-key-change-in-production',
+            jwtSecret,
             { expiresIn: '7d' }
         );
 
@@ -84,9 +89,14 @@ router.post('/login', [
         }
 
         // Generate token
+        const jwtSecret = process.env.JWT_SECRET;
+        if (!jwtSecret) {
+            return res.status(500).json({ error: 'Server configuration error' });
+        }
+        
         const token = jwt.sign(
             { userId: user._id },
-            process.env.JWT_SECRET || 'your-secret-key-change-in-production',
+            jwtSecret,
             { expiresIn: '7d' }
         );
 

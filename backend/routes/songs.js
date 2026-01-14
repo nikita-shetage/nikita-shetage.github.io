@@ -75,7 +75,9 @@ router.post('/upload', auth, upload.single('audio'), async (req, res) => {
     } catch (error) {
         // Clean up file if song creation fails
         if (req.file && fs.existsSync(req.file.path)) {
-            fs.unlinkSync(req.file.path);
+            fs.unlink(req.file.path, (err) => {
+                if (err) console.error('Error deleting file:', err);
+            });
         }
         res.status(500).json({ error: 'Error uploading song' });
     }
@@ -181,9 +183,11 @@ router.delete('/:id', auth, async (req, res) => {
             return res.status(403).json({ error: 'Not authorized to delete this song' });
         }
 
-        // Delete file
+        // Delete file asynchronously
         if (fs.existsSync(song.filePath)) {
-            fs.unlinkSync(song.filePath);
+            fs.unlink(song.filePath, (err) => {
+                if (err) console.error('Error deleting file:', err);
+            });
         }
 
         await Song.findByIdAndDelete(req.params.id);

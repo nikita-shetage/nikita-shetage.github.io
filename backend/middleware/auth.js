@@ -9,7 +9,13 @@ const auth = async (req, res, next) => {
             throw new Error();
         }
 
-        const decoded = jwt.verify(token, process.env.JWT_SECRET || 'your-secret-key-change-in-production');
+        const jwtSecret = process.env.JWT_SECRET;
+        if (!jwtSecret) {
+            console.error('JWT_SECRET environment variable is not set');
+            return res.status(500).json({ error: 'Server configuration error' });
+        }
+
+        const decoded = jwt.verify(token, jwtSecret);
         const user = await User.findById(decoded.userId);
 
         if (!user) {
