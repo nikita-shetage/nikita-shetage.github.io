@@ -185,6 +185,11 @@ function playNext() {
 function toggleShuffle() {
     isShuffle = !isShuffle;
     shuffleBtn.classList.toggle('active', isShuffle);
+    
+    // Save preferences if user is authenticated
+    if (api && api.isAuthenticated()) {
+        savePreferences();
+    }
 }
 
 // Repeat
@@ -198,6 +203,11 @@ function toggleRepeat() {
         repeatBtn.innerHTML = '<i class="fas fa-redo"></i>';
     } else {
         repeatBtn.innerHTML = '<i class="fas fa-redo"></i> <span style="font-size: 10px;">1</span>';
+    }
+    
+    // Save preferences if user is authenticated
+    if (api && api.isAuthenticated()) {
+        savePreferences();
     }
 }
 
@@ -279,6 +289,7 @@ function seekProgress(e) {
 }
 
 // Volume control
+let volumeSaveTimeout;
 function updateVolume(vol) {
     volume = Math.max(0, Math.min(1, vol));
     volumeBarFill.style.width = `${volume * 100}%`;
@@ -290,6 +301,14 @@ function updateVolume(vol) {
         volumeBtn.innerHTML = '<i class="fas fa-volume-down"></i>';
     } else {
         volumeBtn.innerHTML = '<i class="fas fa-volume-up"></i>';
+    }
+    
+    // Save preferences if user is authenticated (debounced)
+    if (api && api.isAuthenticated()) {
+        clearTimeout(volumeSaveTimeout);
+        volumeSaveTimeout = setTimeout(() => {
+            savePreferences();
+        }, 1000);
     }
 }
 
@@ -702,32 +721,6 @@ async function savePreferences() {
     } catch (error) {
         console.error('Error saving preferences:', error);
     }
-}
-
-// Override toggle functions to save preferences
-const originalToggleShuffle = toggleShuffle;
-function toggleShuffle() {
-    originalToggleShuffle();
-    savePreferences();
-}
-
-const originalToggleRepeat = toggleRepeat;
-function toggleRepeat() {
-    originalToggleRepeat();
-    savePreferences();
-}
-
-// Save volume after user adjusts it
-let volumeSaveTimeout;
-const originalUpdateVolume = updateVolume;
-function updateVolume(vol) {
-    originalUpdateVolume(vol);
-    
-    // Debounce saving to avoid too many API calls
-    clearTimeout(volumeSaveTimeout);
-    volumeSaveTimeout = setTimeout(() => {
-        savePreferences();
-    }, 1000);
 }
 
 // Update audio element to use streaming URL
