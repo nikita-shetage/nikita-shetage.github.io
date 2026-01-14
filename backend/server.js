@@ -1,9 +1,9 @@
 const express = require('express');
-const mongoose = require('mongoose');
 const cors = require('cors');
 const path = require('path');
 require('dotenv').config();
 
+const { sequelize } = require('./models');
 const authRoutes = require('./routes/auth');
 const songRoutes = require('./routes/songs');
 const playlistRoutes = require('./routes/playlists');
@@ -26,26 +26,27 @@ app.use('/api/playlists', playlistRoutes);
 
 // Health check
 app.get('/api/health', (req, res) => {
-    res.json({ status: 'OK', message: 'Server is running' });
+    res.json({ status: 'OK', message: 'Server is running', database: 'MySQL' });
 });
 
-// MongoDB connection
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/spotify-clone';
-
-mongoose.connect(MONGODB_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-})
-.then(() => {
-    console.log('Connected to MongoDB');
-    app.listen(PORT, () => {
-        console.log(`Server is running on port ${PORT}`);
+// MySQL connection and sync
+sequelize.authenticate()
+    .then(() => {
+        console.log('Connected to MySQL database');
+        // Sync models with database (creates tables if they don't exist)
+        return sequelize.sync({ alter: process.env.NODE_ENV === 'development' });
+    })
+    .then(() => {
+        console.log('Database synchronized');
+        app.listen(PORT, () => {
+            console.log(`Server is running on port ${PORT}`);
+            console.log(`Database: MySQL`);
+        });
+    })
+    .catch((error) => {
+        console.error('Database connection error:', error);
+        process.exit(1);
     });
-})
-.catch((error) => {
-    console.error('MongoDB connection error:', error);
-    process.exit(1);
-});
 
 // Error handling middleware
 app.use((err, req, res, next) => {
@@ -54,3 +55,4 @@ app.use((err, req, res, next) => {
 });
 
 module.exports = app;
+

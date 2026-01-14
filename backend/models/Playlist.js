@@ -1,45 +1,42 @@
-const mongoose = require('mongoose');
+const { DataTypes } = require('sequelize');
+const sequelize = require('../config/database');
 
-const playlistSchema = new mongoose.Schema({
+const Playlist = sequelize.define('Playlist', {
+    id: {
+        type: DataTypes.INTEGER,
+        primaryKey: true,
+        autoIncrement: true
+    },
     name: {
-        type: String,
-        required: true,
-        trim: true
+        type: DataTypes.STRING(200),
+        allowNull: false
     },
     description: {
-        type: String,
-        default: ''
+        type: DataTypes.TEXT,
+        defaultValue: ''
     },
     owner: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'User',
-        required: true
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        references: {
+            model: 'users',
+            key: 'id'
+        }
     },
-    songs: [{
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Song'
-    }],
     coverImage: {
-        type: String,
-        default: ''
+        type: DataTypes.STRING(500),
+        defaultValue: ''
     },
     isPublic: {
-        type: Boolean,
-        default: true
-    },
-    createdAt: {
-        type: Date,
-        default: Date.now
-    },
-    updatedAt: {
-        type: Date,
-        default: Date.now
+        type: DataTypes.BOOLEAN,
+        defaultValue: true
     }
+}, {
+    tableName: 'playlists',
+    timestamps: true,
+    createdAt: 'createdAt',
+    updatedAt: 'updatedAt'
 });
 
-playlistSchema.pre('save', function(next) {
-    this.updatedAt = Date.now();
-    next();
-});
+module.exports = Playlist;
 
-module.exports = mongoose.model('Playlist', playlistSchema);

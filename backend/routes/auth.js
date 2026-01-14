@@ -3,8 +3,9 @@ const router = express.Router();
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const { body, validationResult } = require('express-validator');
-const User = require('../models/User');
+const { User, Song } = require('../models');
 const auth = require('../middleware/auth');
+const { Op } = require('sequelize');
 
 // Register new user
 router.post('/register', [
@@ -21,7 +22,11 @@ router.post('/register', [
         const { username, email, password } = req.body;
 
         // Check if user already exists
-        const existingUser = await User.findOne({ $or: [{ email }, { username }] });
+        const existingUser = await User.findOne({
+            where: {
+                [Op.or]: [{ email }, { username }]
+            }
+        });
         if (existingUser) {
             return res.status(400).json({ error: 'User already exists with this email or username' });
         }
@@ -30,13 +35,11 @@ router.post('/register', [
         const hashedPassword = await bcrypt.hash(password, 10);
 
         // Create new user
-        const user = new User({
+        const user = await User.create({
             username,
             email,
             password: hashedPassword
         });
-
-        await user.save();
 
         // Generate token
         const jwtSecret = process.env.JWT_SECRET;
@@ -45,20 +48,21 @@ router.post('/register', [
         }
         
         const token = jwt.sign(
-            { userId: user._id },
+            { userId: user.id },
             jwtSecret,
             { expiresIn: '7d' }
         );
 
         res.status(201).json({
             user: {
-                id: user._id,
+                id: user.id,
                 username: user.username,
                 email: user.email
             },
             token
         });
     } catch (error) {
+        console.error('Registration error:', error);
         res.status(500).json({ error: 'Server error during registration' });
     }
 });
@@ -77,7 +81,7 @@ router.post('/login', [
         const { email, password } = req.body;
 
         // Find user
-        const user = await User.findOne({ email });
+        const user = await User.findOne({ where: { email } });
         if (!user) {
             return res.status(401).json({ error: 'Invalid credentials' });
         }
@@ -95,21 +99,26 @@ router.post('/login', [
         }
         
         const token = jwt.sign(
-            { userId: user._id },
+            { userId: user.id },
             jwtSecret,
             { expiresIn: '7d' }
         );
 
         res.json({
             user: {
-                id: user._id,
+                id: user.id,
                 username: user.username,
                 email: user.email,
-                preferences: user.preferences
+                preferences: {
+                    volume: user.volume,
+                    shuffle: user.shuffle,
+                    repeat: user.repeat
+                }
             },
             token
         });
     } catch (error) {
+        console.error('Login error:', error);
         res.status(500).json({ error: 'Server error during login' });
     }
 });
@@ -117,11 +126,28 @@ router.post('/login', [
 // Get current user profile
 router.get('/profile', auth, async (req, res) => {
     try {
-        const user = await User.findById(req.user._id)
-            .select('-password')
-            .populate('likedSongs');
-        res.json(user);
+        const user = await User.findByPk(req.user.id, {
+            attributes: { exclude: ['password'] },
+            include: [{
+                model: Song,
+                as: 'likedSongs',
+                through: { attributes: [] }
+            }]
+        });
+        
+        // Format response to match frontend expectations
+        const userResponse = {
+            ...user.toJSON(),
+            preferences: {
+                volume: user.volume,
+                shuffle: user.shuffle,
+                repeat: user.repeat
+            }
+        };
+        
+        res.json(userResponse);
     } catch (error) {
+        console.error('Profile fetch error:', error);
         res.status(500).json({ error: 'Error fetching profile' });
     }
 });
@@ -137,10 +163,16 @@ router.patch('/profile', auth, async (req, res) => {
     }
 
     try {
-        updates.forEach(update => req.user[update] = req.body[update]);
+        updates.forEach(update => {
+            req.user[update] = req.body[update];
+        });
         await req.user.save();
-        res.json(req.user);
+        
+        const userResponse = req.user.toJSON();
+        delete userResponse.password;
+        res.json(userResponse);
     } catch (error) {
+        console.error('Profile update error:', error);
         res.status(400).json({ error: 'Error updating profile' });
     }
 });
@@ -150,14 +182,25 @@ router.patch('/preferences', auth, async (req, res) => {
     try {
         const { volume, shuffle, repeat } = req.body;
         
-        if (volume !== undefined) req.user.preferences.volume = volume;
-        if (shuffle !== undefined) req.user.preferences.shuffle = shuffle;
-        if (repeat !== undefined) req.user.preferences.repeat = repeat;
+        if (volume !== undefined) req.user.volume = volume;
+        if (shuffle !== undefined) req.user.shuffle = shuffle;
+        if (repeat !== undefined) req.user.repeat = repeat;
 
         await req.user.save();
-        res.json(req.user.preferences);
+        
+        res.json({
+            volume: req.user.volume,
+            shuffle: req.user.shuffle,
+            repeat: req.user.repeat
+        });
     } catch (error) {
+        console.error('Preferences update error:', error);
         res.status(400).json({ error: 'Error updating preferences' });
+    }
+});
+
+module.exports = router;
+
     }
 });
 

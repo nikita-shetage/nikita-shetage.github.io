@@ -24,7 +24,7 @@ A full-stack music streaming web application inspired by Spotify, featuring user
 
 ### Prerequisites
 - Node.js (v14 or higher)
-- MongoDB (local or MongoDB Atlas)
+- MySQL (v5.7 or higher)
 
 ### Backend Setup
 
@@ -43,19 +43,26 @@ npm install
 cp .env.example .env
 ```
 
-4. Update `.env` with your MongoDB URI and JWT secret:
+4. Update `.env` with your MySQL configuration and JWT secret:
 ```
 PORT=5000
-MONGODB_URI=mongodb://localhost:27017/spotify-clone
+DB_HOST=localhost
+DB_PORT=3306
+DB_NAME=spotify_clone
+DB_USER=root
+DB_PASSWORD=your_mysql_password
 JWT_SECRET=your-secret-key-here
+NODE_ENV=development
 ```
 
-5. Start MongoDB (if local):
+5. Create MySQL database:
 ```bash
-mongod
+mysql -u root -p
+CREATE DATABASE spotify_clone;
+exit;
 ```
 
-6. Start backend server:
+6. Start backend server (tables will be created automatically):
 ```bash
 npm run dev
 ```
@@ -87,7 +94,8 @@ npx http-server -p 8080
 ├── api.js              # API client for backend communication
 ├── backend/            # Backend Node.js server
 │   ├── server.js       # Express server setup
-│   ├── models/         # MongoDB models (User, Song, Playlist)
+│   ├── config/         # Database configuration
+│   ├── models/         # Sequelize models (User, Song, Playlist)
 │   ├── routes/         # API routes (auth, songs, playlists)
 │   ├── middleware/     # Authentication middleware
 │   ├── uploads/        # Uploaded audio files
@@ -170,7 +178,7 @@ See `backend/README.md` for complete API documentation.
 
 ### Backend
 - Node.js & Express.js
-- MongoDB & Mongoose
+- MySQL MongoDB & Mongoose Sequelize
 - JWT for authentication
 - Multer for file uploads
 - bcrypt for password hashing
@@ -184,7 +192,7 @@ See `backend/README.md` for complete API documentation.
 
 ### Backend
 - Deploy to Heroku, Railway, Render, or any Node.js hosting
-- Use MongoDB Atlas for database
+- Use managed MySQL service (AWS RDS, Google Cloud SQL)
 - Set environment variables on hosting platform
 - For production, use cloud storage (S3, GCS) for uploads
 
@@ -223,8 +231,12 @@ The application is fully responsive:
 - Verify audio format is supported
 - Ensure you're logged in
 
-### MongoDB connection error
-- Start MongoDB: `mongod`
+### MySQL connection error
+- Ensure MySQL is running
+- Check credentials in `.env`
+- Verify database exists: `CREATE DATABASE spotify_clone;`
+- Check MySQL user permissions
+
 - Check connection string in `.env`
 - For Atlas, whitelist your IP
 

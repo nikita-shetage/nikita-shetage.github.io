@@ -1,53 +1,62 @@
-const mongoose = require('mongoose');
+const { DataTypes } = require('sequelize');
+const sequelize = require('../config/database');
 
-const songSchema = new mongoose.Schema({
+const Song = sequelize.define('Song', {
+    id: {
+        type: DataTypes.INTEGER,
+        primaryKey: true,
+        autoIncrement: true
+    },
     title: {
-        type: String,
-        required: true,
-        trim: true
+        type: DataTypes.STRING(200),
+        allowNull: false
     },
     artist: {
-        type: String,
-        required: true,
-        trim: true
+        type: DataTypes.STRING(200),
+        allowNull: false
     },
     album: {
-        type: String,
-        default: 'Unknown Album'
+        type: DataTypes.STRING(200),
+        defaultValue: 'Unknown Album'
     },
     duration: {
-        type: Number,
-        required: true
+        type: DataTypes.FLOAT,
+        allowNull: false
     },
     fileName: {
-        type: String,
-        required: true
+        type: DataTypes.STRING(500),
+        allowNull: false
     },
     filePath: {
-        type: String,
-        required: true
+        type: DataTypes.STRING(1000),
+        allowNull: false
     },
     coverImage: {
-        type: String,
-        default: ''
+        type: DataTypes.STRING(500),
+        defaultValue: ''
     },
     genre: {
-        type: String,
-        default: 'Unknown'
+        type: DataTypes.STRING(100),
+        defaultValue: 'Unknown'
     },
     uploadedBy: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'User',
-        required: true
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        references: {
+            model: 'users',
+            key: 'id'
+        }
     },
     plays: {
-        type: Number,
-        default: 0
-    },
-    createdAt: {
-        type: Date,
-        default: Date.now
+        type: DataTypes.INTEGER,
+        defaultValue: 0
     }
+}, {
+    tableName: 'songs',
+    timestamps: true,
+    createdAt: 'createdAt',
+    updatedAt: 'updatedAt'
 });
 
-module.exports = mongoose.model('Song', songSchema);
+module.exports = Song;
+

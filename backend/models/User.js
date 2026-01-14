@@ -1,55 +1,68 @@
-const mongoose = require('mongoose');
+const { DataTypes } = require('sequelize');
+const sequelize = require('../config/database');
 
-const userSchema = new mongoose.Schema({
+const User = sequelize.define('User', {
+    id: {
+        type: DataTypes.INTEGER,
+        primaryKey: true,
+        autoIncrement: true
+    },
     username: {
-        type: String,
-        required: true,
+        type: DataTypes.STRING(50),
+        allowNull: false,
         unique: true,
-        trim: true,
-        minlength: 3
+        validate: {
+            len: [3, 50]
+        }
     },
     email: {
-        type: String,
-        required: true,
+        type: DataTypes.STRING(100),
+        allowNull: false,
         unique: true,
-        trim: true,
-        lowercase: true
+        validate: {
+            isEmail: true
+        },
+        set(value) {
+            this.setDataValue('email', value.toLowerCase().trim());
+        }
     },
     password: {
-        type: String,
-        required: true,
-        minlength: 6
+        type: DataTypes.STRING(255),
+        allowNull: false,
+        validate: {
+            len: [6, 255]
+        }
     },
     profilePicture: {
-        type: String,
-        default: ''
+        type: DataTypes.STRING(500),
+        defaultValue: ''
     },
-    likedSongs: [{
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Song'
-    }],
-    preferences: {
-        volume: {
-            type: Number,
-            default: 0.7,
+    volume: {
+        type: DataTypes.FLOAT,
+        defaultValue: 0.7,
+        validate: {
             min: 0,
             max: 1
-        },
-        shuffle: {
-            type: Boolean,
-            default: false
-        },
-        repeat: {
-            type: Number,
-            default: 0,
+        }
+    },
+    shuffle: {
+        type: DataTypes.BOOLEAN,
+        defaultValue: false
+    },
+    repeat: {
+        type: DataTypes.INTEGER,
+        defaultValue: 0,
+        validate: {
             min: 0,
             max: 2
         }
-    },
-    createdAt: {
-        type: Date,
-        default: Date.now
     }
+}, {
+    tableName: 'users',
+    timestamps: true,
+    createdAt: 'createdAt',
+    updatedAt: 'updatedAt'
 });
 
-module.exports = mongoose.model('User', userSchema);
+module.exports = User;
+

@@ -1,6 +1,6 @@
 # Spotify Clone Backend
 
-Full-stack music streaming application backend with user authentication, file upload, and playlist management.
+Full-stack music streaming application backend with user authentication, file upload, and playlist management using MySQL.
 
 ## Features
 
@@ -13,7 +13,7 @@ Full-stack music streaming application backend with user authentication, file up
 ## Tech Stack
 
 - **Backend**: Node.js + Express.js
-- **Database**: MongoDB with Mongoose ODM
+- **Database**: MySQL with Sequelize ORM
 - **Authentication**: JWT (JSON Web Tokens) + bcrypt
 - **File Upload**: Multer with metadata extraction
 - **Audio Streaming**: Range request support for efficient streaming
@@ -23,7 +23,7 @@ Full-stack music streaming application backend with user authentication, file up
 ### Prerequisites
 
 - Node.js (v14 or higher)
-- MongoDB (local installation or MongoDB Atlas account)
+- MySQL (v5.7 or higher)
 
 ### Installation
 
@@ -42,24 +42,26 @@ npm install
 cp .env.example .env
 ```
 
-4. Update the `.env` file with your configuration:
+4. Update the `.env` file with your MySQL configuration:
 ```
 PORT=5000
-MONGODB_URI=mongodb://localhost:27017/spotify-clone
+DB_HOST=localhost
+DB_PORT=3306
+DB_NAME=spotify_clone
+DB_USER=root
+DB_PASSWORD=your_mysql_password
 JWT_SECRET=your-super-secret-jwt-key-change-this-in-production
+NODE_ENV=development
 ```
 
-For production with MongoDB Atlas:
-```
-MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/spotify-clone?retryWrites=true&w=majority
-```
-
-5. Start MongoDB (if running locally):
+5. Create the MySQL database:
 ```bash
-mongod
+mysql -u root -p
+CREATE DATABASE spotify_clone;
+exit;
 ```
 
-6. Start the server:
+6. Start the server (tables will be created automatically):
 ```bash
 # Development mode with auto-reload
 npm run dev
@@ -68,7 +70,55 @@ npm run dev
 npm start
 ```
 
-The server will start on `http://localhost:5000` (or the PORT specified in .env)
+The server will start on `http://localhost:5000` and automatically:
+- Connect to MySQL
+- Create all necessary tables (users, songs, playlists, user_liked_songs, playlist_songs)
+- Sync the database schema
+
+## Database Schema
+
+### Tables
+
+**users**
+- id (INT, PRIMARY KEY, AUTO_INCREMENT)
+- username (VARCHAR, UNIQUE)
+- email (VARCHAR, UNIQUE)
+- password (VARCHAR)
+- profilePicture (VARCHAR)
+- volume (FLOAT)
+- shuffle (BOOLEAN)
+- repeat (INT)
+- createdAt, updatedAt (TIMESTAMP)
+
+**songs**
+- id (INT, PRIMARY KEY, AUTO_INCREMENT)
+- title, artist, album (VARCHAR)
+- duration (FLOAT)
+- fileName, filePath (VARCHAR)
+- coverImage, genre (VARCHAR)
+- uploadedBy (INT, FOREIGN KEY -> users.id)
+- plays (INT)
+- createdAt, updatedAt (TIMESTAMP)
+
+**playlists**
+- id (INT, PRIMARY KEY, AUTO_INCREMENT)
+- name (VARCHAR)
+- description (TEXT)
+- owner (INT, FOREIGN KEY -> users.id)
+- coverImage (VARCHAR)
+- isPublic (BOOLEAN)
+- createdAt, updatedAt (TIMESTAMP)
+
+**user_liked_songs** (junction table)
+- userId (INT, FOREIGN KEY -> users.id)
+- songId (INT, FOREIGN KEY -> songs.id)
+- UNIQUE(userId, songId)
+
+**playlist_songs** (junction table)
+- playlistId (INT, FOREIGN KEY -> playlists.id)
+- songId (INT, FOREIGN KEY -> songs.id)
+- position (INT)
+- UNIQUE(playlistId, songId)
 
 ## API Endpoints
 
@@ -190,7 +240,7 @@ npm start
 ### Environment Variables
 
 Ensure all environment variables are properly set in production:
-- `MONGODB_URI`: Use MongoDB Atlas connection string
+- `DB_HOST`, `DB_PORT`, `DB_NAME`, `DB_USER`, `DB_PASSWORD`: MySQL connection details
 - `JWT_SECRET`: Use a strong, random secret key
 - `PORT`: Set by hosting platform or use 5000
 
@@ -204,7 +254,11 @@ Update CORS configuration in `server.js` to only allow your frontend domain in p
 
 ### Database
 
-Use MongoDB Atlas for production database with proper access controls.
+Use a managed MySQL service (AWS RDS, Google Cloud SQL, Azure Database for MySQL) for production with proper:
+- SSL/TLS connections
+- Access controls and firewall rules
+- Regular backups
+- Connection pooling
 
 ## Frontend Integration
 
@@ -259,10 +313,12 @@ Expected response:
 
 ## Troubleshooting
 
-### MongoDB Connection Issues
-- Ensure MongoDB is running (`mongod` command)
-- Check connection string in `.env`
-- For Atlas, whitelist your IP address
+### MySQL Connection Issues
+- Ensure MySQL server is running
+- Check database credentials in `.env`
+- Verify database `spotify_clone` exists: `CREATE DATABASE spotify_clone;`
+- Check MySQL user permissions
+- For remote MySQL, ensure firewall allows connections
 
 ### File Upload Issues
 - Check upload directory permissions
