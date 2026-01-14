@@ -1,0 +1,15 @@
+# Backend
+backend/node_modules/
+backend/.env
+backend/uploads/
+backend/*.log
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo

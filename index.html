@@ -8,6 +8,69 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Auth Modal -->
+    <div id="auth-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="login-form" class="auth-form">
+                <h2>Log in to Spotify</h2>
+                <form id="loginForm">
+                    <input type="email" id="login-email" placeholder="Email" required>
+                    <input type="password" id="login-password" placeholder="Password" required>
+                    <button type="submit" class="btn-primary">Log In</button>
+                </form>
+                <p>Don't have an account? <a href="#" id="show-signup">Sign up</a></p>
+            </div>
+            <div id="signup-form" class="auth-form" style="display:none;">
+                <h2>Sign up for Spotify</h2>
+                <form id="signupForm">
+                    <input type="text" id="signup-username" placeholder="Username" required>
+                    <input type="email" id="signup-email" placeholder="Email" required>
+                    <input type="password" id="signup-password" placeholder="Password (min 6 characters)" required>
+                    <button type="submit" class="btn-primary">Sign Up</button>
+                </form>
+                <p>Already have an account? <a href="#" id="show-login">Log in</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Upload Modal -->
+    <div id="upload-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Upload Song</h2>
+            <form id="uploadForm">
+                <input type="file" id="audio-file" accept="audio/*" required>
+                <input type="text" id="song-title" placeholder="Song Title" required>
+                <input type="text" id="song-artist" placeholder="Artist" required>
+                <input type="text" id="song-album" placeholder="Album (optional)">
+                <input type="text" id="song-genre" placeholder="Genre (optional)">
+                <button type="submit" class="btn-primary">Upload</button>
+                <div id="upload-progress" style="display:none;">
+                    <progress id="progress-bar" value="0" max="100"></progress>
+                    <span id="progress-text">0%</span>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Create Playlist Modal -->
+    <div id="playlist-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Create Playlist</h2>
+            <form id="createPlaylistForm">
+                <input type="text" id="playlist-name" placeholder="Playlist Name" required>
+                <textarea id="playlist-description" placeholder="Description (optional)"></textarea>
+                <label>
+                    <input type="checkbox" id="playlist-public" checked>
+                    Make playlist public
+                </label>
+                <button type="submit" class="btn-primary">Create</button>
+            </form>
+        </div>
+    </div>
+
     <div class="container">
         <!-- Sidebar -->
         <aside class="sidebar">
@@ -34,13 +97,17 @@
             </nav>
             
             <div class="playlist-section">
-                <button class="create-playlist-btn">
+                <button class="create-playlist-btn" id="create-playlist-btn">
                     <i class="fas fa-plus"></i>
                     Create Playlist
                 </button>
-                <button class="liked-songs-btn">
+                <button class="liked-songs-btn" id="liked-songs-btn">
                     <i class="fas fa-heart"></i>
                     Liked Songs
+                </button>
+                <button class="upload-song-btn" id="upload-btn" style="display:none;">
+                    <i class="fas fa-upload"></i>
+                    Upload Song
                 </button>
             </div>
             
@@ -64,10 +131,13 @@
                 </div>
                 <div class="user-section">
                     <button class="upgrade-btn">Upgrade</button>
-                    <div class="user-profile">
+                    <div class="user-profile" id="user-profile">
                         <i class="fas fa-user-circle"></i>
-                        <span>User</span>
+                        <span id="username-display">Login</span>
                     </div>
+                    <button class="logout-btn" id="logout-btn" style="display:none;">
+                        <i class="fas fa-sign-out-alt"></i>
+                    </button>
                 </div>
             </header>
             
@@ -257,6 +327,7 @@
     </div>
     
     <audio id="audio-player"></audio>
+    <script src="api.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
